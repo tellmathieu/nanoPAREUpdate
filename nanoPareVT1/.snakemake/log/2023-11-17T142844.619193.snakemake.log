@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+all               1
+endMask_sh        1
+total             2
+
+Select jobs to execute...
+
+[Fri Nov 17 14:29:14 2023]
+rule endMask_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMask.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Fri Nov 17 14:29:17 2023]
+Error in rule endMask_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    shell:
+        
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMask.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-11-17T142844.619193.snakemake.log

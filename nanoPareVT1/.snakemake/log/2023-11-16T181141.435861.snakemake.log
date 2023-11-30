@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+all                1
+endGraph_sh        1
+total              2
+
+Select jobs to execute...
+
+[Thu Nov 16 18:11:49 2023]
+rule endGraph_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    resources: tmpdir=/tmp
+
+RuleException in rule endGraph_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/snakeSetup2EndMask.smk, line 67:
+IndexError: tuple index out of range, when formatting the following:
+
+			sample_names = ($(cat {params.refTable} | awk '{} print $4 }'))
+			echo ${sample_names[1]}
+			#while [ $line -le $total_lines ]
+			#do 
+			#	bash {params.endGraph} -N $line -R {params.refTable} -G {params.genomeFasta} -A {params.genomeAnnotation} 
+			#	let line++
+			#done
+			echo DONE > {output}
+		

@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+all                1
+endGraph_sh        1
+total              2
+
+Select jobs to execute...
+
+[Thu Nov 16 23:05:18 2023]
+rule endGraph_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+		bash endGraphBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endGraph.sh /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.57.gff3 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Thu Nov 16 23:05:44 2023]
+Error in rule endGraph_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    shell:
+        
+		bash endGraphBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endGraph.sh /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.57.gff3 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-11-16T230514.781289.snakemake.log

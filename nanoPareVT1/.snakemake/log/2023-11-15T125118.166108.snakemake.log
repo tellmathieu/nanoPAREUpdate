@@ -1,0 +1,49 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+endMap_sh        1
+total            2
+
+Select jobs to execute...
+
+[Wed Nov 15 12:51:20 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    resources: tmpdir=/tmp
+
+
+			cat /share/quonlab/workspaces/tmathieu/meyersData/reference.table | wc -l | read total_lines
+			line = 1
+			while $line <= $total_lines; do
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMap.sh -L  -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta -A /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.57.gff3
+				line = line + 1
+			done
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Wed Nov 15 13:47:36 2023]
+Error in rule endMap_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    shell:
+        
+			cat /share/quonlab/workspaces/tmathieu/meyersData/reference.table | wc -l | read total_lines
+			line = 1
+			while $line <= $total_lines; do
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMap.sh -L  -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta -A /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.57.gff3
+				line = line + 1
+			done
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-11-15T125118.166108.snakemake.log

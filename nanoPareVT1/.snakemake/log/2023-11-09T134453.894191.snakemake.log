@@ -1,0 +1,3 @@
+WorkflowError in file /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/snakeSetup2EndMask.smk, line 5:
+Workflow defines configfile ../config.json but it is not present or accessible (full checked path: /share/quonlab/workspaces/tmathieu/meyers/config.json).
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/snakeSetup2EndMask.smk", line 5, in <module>

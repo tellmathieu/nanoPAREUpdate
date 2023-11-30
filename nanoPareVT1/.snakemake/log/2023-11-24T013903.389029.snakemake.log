@@ -1,0 +1,46 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+all                1
+endClass_sh        1
+endGraph_sh        1
+endMap_sh          1
+endMask_sh         1
+setup_sh           1
+total              6
+
+Select jobs to execute...
+
+[Fri Nov 24 01:39:12 2023]
+rule setup_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    jobid: 5
+    reason: Code has changed since last execution; Params have changed since last execution
+    threads: 12
+    resources: tmpdir=/tmp
+
+
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQ /share/quonlab/workspaces/tmathieu/meyersData/reference.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff --lmod false --ram 30 --cpus 12 --gtf_gene_tag gene_id --gtf_transcript_tag transcript_id
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+		
+[Fri Nov 24 01:39:13 2023]
+Error in rule setup_sh:
+    jobid: 5
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    shell:
+        
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQ /share/quonlab/workspaces/tmathieu/meyersData/reference.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff --lmod false --ram 30 --cpus 12 --gtf_gene_tag gene_id --gtf_transcript_tag transcript_id
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-24T013903.389029.snakemake.log

@@ -1,0 +1,44 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+all                1
+endGraph_sh        1
+endMap_sh          1
+setup_sh           1
+total              4
+
+Select jobs to execute...
+
+[Fri Nov 17 00:41:29 2023]
+rule setup_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    jobid: 3
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt; Params have changed since last execution
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQ /share/quonlab/workspaces/tmathieu/meyersData/reference.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Fri Nov 17 00:42:05 2023]
+Error in rule setup_sh:
+    jobid: 3
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    shell:
+        
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQ /share/quonlab/workspaces/tmathieu/meyersData/reference.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-11-17T004126.503419.snakemake.log

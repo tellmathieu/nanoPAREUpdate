@@ -1,0 +1,125 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+all                1
+endClass_sh        1
+endGraph_sh        1
+endMap_sh          1
+endMask_sh         1
+setup_sh           1
+total              6
+
+Select jobs to execute...
+
+[Sun Nov 19 23:14:58 2023]
+rule setup_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    jobid: 5
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQ /share/quonlab/workspaces/tmathieu/meyersData/reference.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+		
+[Sun Nov 19 23:15:17 2023]
+Finished job 5.
+1 of 6 steps (17%) done
+Select jobs to execute...
+
+[Sun Nov 19 23:15:17 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    jobid: 4
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+				let line++
+			done
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+		
+[Sun Nov 19 23:21:29 2023]
+Finished job 4.
+2 of 6 steps (33%) done
+Select jobs to execute...
+
+[Sun Nov 19 23:21:29 2023]
+rule endGraph_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    jobid: 3
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+		bash endGraphBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endGraph.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+		
+[Sun Nov 19 23:23:30 2023]
+Finished job 3.
+3 of 6 steps (50%) done
+Select jobs to execute...
+
+[Sun Nov 19 23:23:30 2023]
+rule endClass_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+    jobid: 2
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endClass.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+		
+[Sun Nov 19 23:23:53 2023]
+Finished job 2.
+4 of 6 steps (67%) done
+Select jobs to execute...
+
+[Sun Nov 19 23:23:53 2023]
+rule endMask_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMask.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+		
+[Sun Nov 19 23:24:22 2023]
+Finished job 1.
+5 of 6 steps (83%) done
+Select jobs to execute...
+
+[Sun Nov 19 23:24:22 2023]
+localrule all:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    jobid: 0
+    reason: Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    resources: tmpdir=/tmp
+
+[Sun Nov 19 23:24:22 2023]
+Finished job 0.
+6 of 6 steps (100%) done
+Complete log: .snakemake/log/2023-11-19T231428.770902.snakemake.log

@@ -1,0 +1,2 @@
+SyntaxError in file /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/snakeSetup2EndMask.smk, line 84:
+Multiple run/shell/script/notebook/wrapper/template_engine/cwl keywords in rule endGraph_sh. (snakeSetup2EndMask.smk, line 84)

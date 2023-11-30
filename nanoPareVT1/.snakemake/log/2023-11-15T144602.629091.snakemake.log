@@ -1,0 +1,47 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+endMap_sh        1
+total            2
+
+Select jobs to execute...
+
+[Wed Nov 15 14:46:04 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    resources: tmpdir=/tmp
+
+
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.dna.toplevel.fasta -A /share/quonlab/workspaces/tmathieu/meyersData/Arabidopsis_thaliana.TAIR10.57.gff3 
+				let line++
+			done
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+		
+[Wed Nov 15 14:46:44 2023]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Wed Nov 15 14:46:44 2023]
+localrule all:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    jobid: 0
+    reason: Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDone.txt
+    resources: tmpdir=/tmp
+
+[Wed Nov 15 14:46:44 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2023-11-15T144602.629091.snakemake.log

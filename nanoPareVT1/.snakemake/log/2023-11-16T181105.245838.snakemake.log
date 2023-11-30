@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule endGraph_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/snakeSetup2EndMask.smk, line 67:
+Missing input files for rule endGraph_sh:
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endGraphDone.txt
+    affected files:
+        /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMapDont.txt

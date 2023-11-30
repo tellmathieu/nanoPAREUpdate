@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+endCut_sh        1
+total            2
+
+Select jobs to execute...
+
+[Sun Nov 26 21:12:05 2023]
+rule endCut_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+    threads: 12
+    resources: tmpdir=/tmp
+
+
+		bash runEndCutBash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 1000
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+		
+[Sun Nov 26 21:12:05 2023]
+Error in rule endCut_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+    shell:
+        
+		bash runEndCutBash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 1000
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-11-26T211159.249538.snakemake.log

@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+all               1
+endMask_sh        1
+total             2
+
+Select jobs to execute...
+
+[Fri Nov 17 14:13:15 2023]
+rule endMask_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endClassDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    threads: 10
+    resources: tmpdir=/tmp
+
+
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/endMask.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff 
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+		
+Terminating processes on user request, this might take some time.
+Cancelling snakemake on user request.

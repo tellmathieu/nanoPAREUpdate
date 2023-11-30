@@ -1,0 +1,11 @@
+name: nanopare1
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - "python>=3.8"
+  - "star>=2.5"
+  - "bedtools>=2.26"
+  - "samtools>=1.3"
+  - snakemake
+

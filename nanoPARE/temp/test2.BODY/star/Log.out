@@ -1,0 +1,300 @@
+STAR version=2.7.11a
+STAR compilation time,server,dir=2023-09-15T03:01:31+0000 :/opt/conda/conda-bld/star_1694746407721/work/source
+##### Command Line:
+/share/quonlab/workspaces/tmathieu/miniforge3/envs/nanopare2/bin/STAR-avx --runMode alignReads --alignIntronMax 10000 --alignMatesGapMax 11000 --alignSJDBoverhangMin 1 --alignSJoverhangMin 10 --outSJfilterOverhangMin -1 15 15 15 --outSJfilterCountTotalMin -1 2 2 2 --outSJfilterCountUniqueMin -1 2 2 2 --outFilterType BySJout --outFilterMismatchNmax 2 --outFilterMismatchNoverLmax .05 --twopassMode Basic --genomeDir /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/genome_index --limitBAMsortRAM 30000000000 --outFilterIntronMotifs RemoveNoncanonicalUnannotated --outReadsUnmapped Fastx --outFilterMultimapNmax 100 --outSAMmultNmax 100 --outSAMattributes NH HI AS nM NM MD jM jI XS --outSAMprimaryFlag AllBestScore --outSAMtype BAM Unsorted --outTmpDir /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY --quantMode GeneCounts --runRNGseed 12345 --runThreadN 12 --sjdbGTFfile /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff --alignEndsType EndToEnd --outFileNamePrefix /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/star/ --readFilesIn /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/test2_cleaned.1.fastq
+##### Initial USER parameters from Command Line:
+outFileNamePrefix                 /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/star/
+outTmpDir                         /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY
+###### All USER parameters from Command Line:
+runMode                       alignReads        ~RE-DEFINED
+alignIntronMax                10000     ~RE-DEFINED
+alignMatesGapMax              11000     ~RE-DEFINED
+alignSJDBoverhangMin          1     ~RE-DEFINED
+alignSJoverhangMin            10     ~RE-DEFINED
+outSJfilterOverhangMin        -1   15   15   15        ~RE-DEFINED
+outSJfilterCountTotalMin      -1   2   2   2        ~RE-DEFINED
+outSJfilterCountUniqueMin     -1   2   2   2        ~RE-DEFINED
+outFilterType                 BySJout     ~RE-DEFINED
+outFilterMismatchNmax         2     ~RE-DEFINED
+outFilterMismatchNoverLmax    0.05     ~RE-DEFINED
+twopassMode                   Basic     ~RE-DEFINED
+genomeDir                     /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/genome_index     ~RE-DEFINED
+limitBAMsortRAM               30000000000     ~RE-DEFINED
+outFilterIntronMotifs         RemoveNoncanonicalUnannotated     ~RE-DEFINED
+outReadsUnmapped              Fastx     ~RE-DEFINED
+outFilterMultimapNmax         100     ~RE-DEFINED
+outSAMmultNmax                100     ~RE-DEFINED
+outSAMattributes              NH   HI   AS   nM   NM   MD   jM   jI   XS        ~RE-DEFINED
+outSAMprimaryFlag             AllBestScore     ~RE-DEFINED
+outSAMtype                    BAM   Unsorted        ~RE-DEFINED
+outTmpDir                     /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY     ~RE-DEFINED
+quantMode                     GeneCounts        ~RE-DEFINED
+runRNGseed                    12345     ~RE-DEFINED
+runThreadN                    12     ~RE-DEFINED
+sjdbGTFfile                   /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff     ~RE-DEFINED
+alignEndsType                 EndToEnd     ~RE-DEFINED
+outFileNamePrefix             /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/star/     ~RE-DEFINED
+readFilesIn                   /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/test2_cleaned.1.fastq        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           alignReads   
+runThreadN                        12
+runRNGseed                        12345
+genomeDir                         /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/genome_index
+readFilesIn                       /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/test2_cleaned.1.fastq   
+limitBAMsortRAM                   30000000000
+outFileNamePrefix                 /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/star/
+outTmpDir                         /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY
+outReadsUnmapped                  Fastx
+outSAMtype                        BAM   Unsorted   
+outSAMattributes                  NH   HI   AS   nM   NM   MD   jM   jI   XS   
+outSAMprimaryFlag                 AllBestScore
+outSAMmultNmax                    100
+outSJfilterCountUniqueMin         -1   2   2   2   
+outSJfilterCountTotalMin          -1   2   2   2   
+outSJfilterOverhangMin            -1   15   15   15   
+outFilterType                     BySJout
+outFilterMultimapNmax             100
+outFilterMismatchNmax             2
+outFilterMismatchNoverLmax        0.05
+outFilterIntronMotifs             RemoveNoncanonicalUnannotated
+alignIntronMax                    10000
+alignMatesGapMax                  11000
+alignSJoverhangMin                10
+alignSJDBoverhangMin              1
+alignEndsType                     EndToEnd
+sjdbGTFfile                       /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff
+quantMode                         GeneCounts   
+twopassMode                       Basic
+
+-------------------------------
+##### Final effective command line:
+/share/quonlab/workspaces/tmathieu/miniforge3/envs/nanopare2/bin/STAR-avx   --runMode alignReads      --runThreadN 12   --runRNGseed 12345   --genomeDir /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/genome_index   --readFilesIn /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/test2_cleaned.1.fastq      --limitBAMsortRAM 30000000000   --outFileNamePrefix /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/star/   --outTmpDir /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY   --outReadsUnmapped Fastx   --outSAMtype BAM   Unsorted      --outSAMattributes NH   HI   AS   nM   NM   MD   jM   jI   XS      --outSAMprimaryFlag AllBestScore   --outSAMmultNmax 100   --outSJfilterCountUniqueMin -1   2   2   2      --outSJfilterCountTotalMin -1   2   2   2      --outSJfilterOverhangMin -1   15   15   15      --outFilterType BySJout   --outFilterMultimapNmax 100   --outFilterMismatchNmax 2   --outFilterMismatchNoverLmax 0.05   --outFilterIntronMotifs RemoveNoncanonicalUnannotated   --alignIntronMax 10000   --alignMatesGapMax 11000   --alignSJoverhangMin 10   --alignSJDBoverhangMin 1   --alignEndsType EndToEnd   --sjdbGTFfile /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff   --quantMode GeneCounts      --twopassMode Basic
+----------------------------------------
+
+Number of fastq files for each mate = 1
+WARNING --outSAMattributes contains XS, therefore STAR will use --outSAMstrandField intronMotif
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+Reading genome generation parameters:
+### /share/quonlab/workspaces/tmathieu/miniforge3/envs/nanopare2/bin/STAR-avx   --runMode genomeGenerate      --runThreadN 12   --genomeDir /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/genome_index   --genomeFastaFiles /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta      --genomeSAindexNbases 8   --outFileNamePrefix /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/log/   --sjdbGTFfile /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff   --sjdbGTFtagExonParentTranscript transcript_id   --sjdbGTFtagExonParentGene gene_id
+### GstrandBit=32
+versionGenome                 2.7.4a     ~RE-DEFINED
+genomeType                    Full     ~RE-DEFINED
+genomeFastaFiles              /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta        ~RE-DEFINED
+genomeSAindexNbases           8     ~RE-DEFINED
+genomeChrBinNbits             18     ~RE-DEFINED
+genomeSAsparseD               1     ~RE-DEFINED
+genomeTransformType           None     ~RE-DEFINED
+genomeTransformVCF            -     ~RE-DEFINED
+sjdbOverhang                  100     ~RE-DEFINED
+sjdbFileChrStartEnd           -        ~RE-DEFINED
+sjdbGTFfile                   /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff     ~RE-DEFINED
+sjdbGTFchrPrefix              -     ~RE-DEFINED
+sjdbGTFfeatureExon            exon     ~RE-DEFINED
+sjdbGTFtagExonParentTranscripttranscript_id     ~RE-DEFINED
+sjdbGTFtagExonParentGene      gene_id     ~RE-DEFINED
+sjdbInsertSave                Basic     ~RE-DEFINED
+genomeFileSizes               1304047   10347145        ~RE-DEFINED
+Genome version is compatible with current STAR
+Number of real (reference) chromosomes= 1
+1	Ath_chr2	1000000	0
+--sjdbOverhang = 100 taken from the generated genome
+Started loading the genome: Fri Nov 24 01:52:52 2023
+
+Genome: size given as a parameter = 1304047
+SA: size given as a parameter = 10347145
+SAindex: size given as a parameter = 1
+Read from SAindex: pGe.gSAindexNbases=8  nSAi=87380
+nGenome=1304047;  nSAbyte=10347145
+GstrandBit=32   SA number of indices=2508398
+Shared memory is not used for genomes. Allocated a private copy of the genome.
+Genome file size: 1304047 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading Genome ... done! state: good=1 eof=0 fail=0 bad=0; loaded 1304047 bytes
+SA file size: 10347145 bytes; state: good=1 eof=0 fail=0 bad=0
+Loading SA ... done! state: good=1 eof=0 fail=0 bad=0; loaded 10347145 bytes
+Loading SAindex ... done: 382371 bytes
+Finished loading the genome: Fri Nov 24 01:52:52 2023
+
+Processing splice junctions database sjdbN=1271,   pGe.sjdbOverhang=100 
+To accommodate alignIntronMax=10000 redefined winBinNbits=11
+To accommodate alignIntronMax=10000 and alignMatesGapMax=11000, redefined winFlankNbins=6 and winAnchorDistNbins=12
+Nov 24 01:52:52   Loaded database junctions from the generated genome /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/genome_index//sjdbList.out.tab: 1271 total junctions
+
+Nov 24 01:52:52 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=/share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff, found:
+		377 transcripts
+		2123 exons (non-collapsed)
+		1271 collapsed junctions
+Total junctions: 2542
+Nov 24 01:52:52 ..... finished GTF processing
+
+Nov 24 01:52:52   Finished preparing junctions
+Nov 24 01:52:52 ..... inserting junctions into the genome indices
+Nov 24 01:52:52   Finished SA search: number of new junctions=0, old junctions=1271
+Nov 24 01:52:52   Finished sorting SA indicesL nInd=0
+Genome size with junctions=1304047  1048576   255471
+GstrandBit1=32   GstrandBit=32
+Nov 24 01:52:53   Finished inserting junction indices
+Nov 24 01:52:53   Finished SAi
+Nov 24 01:52:53 ..... finished inserting junctions into genome
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread2 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread3 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread4 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread5 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread6 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread7 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread8 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread9 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread10 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread11 ... ok
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Thread #2 end of input stream, nextChar=-1
+Completed: thread #3
+Completed: thread #4
+Completed: thread #5
+Completed: thread #6
+Completed: thread #7
+Completed: thread #9
+Completed: thread #8
+Completed: thread #0
+Completed: thread #10
+Completed: thread #11
+Completed: thread #2
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+Nov 24 01:52:56   Loaded database junctions from the 1st pass file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/test2.BODY/star/_STARpass1//SJ.out.tab: 3614 total junctions
+
+Nov 24 01:52:56   Finished preparing junctions
+Nov 24 01:52:56 ..... inserting junctions into the genome indices
+Nov 24 01:52:56   Finished SA search: number of new junctions=36, old junctions=1271
+Nov 24 01:52:56   Finished sorting SA indicesL nInd=14400
+Genome size with junctions=1311283  1048576   262707
+GstrandBit1=32   GstrandBit=32
+Nov 24 01:52:56   Finished inserting junction indices
+Nov 24 01:52:56   Finished SAi
+Nov 24 01:52:56 ..... finished inserting junctions into genome
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread0 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread0 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread1 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread1 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread2 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread2 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread3 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread3 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread4 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread4 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread5 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread5 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread6 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread6 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread7 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread7 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread8 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread8 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread9 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread9 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread10 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread10 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//Unmapped.out.mate0.thread11 ... ok
+Opening the file: /share/quonlab/workspaces/tmathieu/meyers/nanoPARE/temp/star/test2.BODY//FilterBySJoutFiles.mate1.thread11 ... ok
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Created thread # 10
+Created thread # 11
+Thread #2 end of input stream, nextChar=-1
+Completed: thread #3
+Completed: thread #4
+Completed: thread #5
+Completed: thread #7
+Completed: thread #6
+Completed: thread #8
+Completed: thread #9
+Completed: thread #0
+Completed: thread #10
+Completed: thread #11
+Completed: thread #2
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+Completed stage 1 mapping of outFilterBySJout mapping
+Detected 0 novel junctions that passed filtering, will proceed to filter reads that contained unannotated junctions
+Created thread # 1
+Created thread # 2
+Created thread # 3
+Created thread # 4
+Created thread # 5
+Created thread # 6
+Created thread # 7
+Created thread # 8
+Created thread # 9
+Completed: thread #3
+Created thread # 10
+Completed: thread #7
+Completed: thread #5
+Created thread # 11
+Completed: thread #4
+Completed: thread #6
+Completed: thread #0
+Completed: thread #8
+Completed: thread #10
+Completed: thread #9
+Completed: thread #11
+Completed: thread #2
+Completed: thread #1
+Joined thread # 1
+Joined thread # 2
+Joined thread # 3
+Joined thread # 4
+Joined thread # 5
+Joined thread # 6
+Joined thread # 7
+Joined thread # 8
+Joined thread # 9
+Joined thread # 10
+Joined thread # 11
+Nov 24 01:53:01 ..... finished mapping
+RAM after mapping:
+VmPeak:	 7653932 kB; VmSize:	 7530132 kB; VmHWM:	 2860100 kB; VmRSS:	 2807592 kB; 
+RAM after freeing genome index memory:
+VmPeak:	 7653932 kB; VmSize:	 3887024 kB; VmHWM:	 2860100 kB; VmRSS:	 2775552 kB; 
+ALL DONE!

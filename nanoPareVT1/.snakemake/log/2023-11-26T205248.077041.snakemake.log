@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+endCut_sh        1
+total            2
+
+Select jobs to execute...
+
+[Sun Nov 26 20:52:50 2023]
+rule endCut_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endMaskDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/endCutDone.txt
+    threads: 12
+    resources: tmpdir=/tmp
+
+RuleException in rule endCut_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPareVT1/snakeSetup2EndMask.smk, line 154:
+AttributeError: 'Params' object has no attribute 'endMask', when formatting the following:
+
+		bash runEndCutBash.sh {params.shuffle} {params.sRna} {params.numShuffledSets} {params.refTable} {params.endMask} {params.genomeFasta} {params.cpu}
+		echo DONE > {output}
+		
