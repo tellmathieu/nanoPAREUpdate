@@ -2,14 +2,14 @@
 	"Title" : "nanoPARE Pipeline Adapted with sPARTA",
 	"Description" : "Adapted version of nanoPARE Pipeline with sPARTA to make it quicker",
 
-	"fastaRef" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/genome.fasta",
-	"annotation" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPARE/resources/annotation.gff",
+	"fastaRef" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
+	"annotation" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
 	"refTable" : "/share/quonlab/workspaces/tmathieu/meyersData/reference.table",
 		"seq_run_SE_or_PE" : "SE",
 		"adapter_seq" : "nextera",
 	"fastqDir" : "/share/quonlab/workspaces/tmathieu/meyersData/FASTQ/",
 
-	"sRna" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
+	"sRna" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
 	"numShuffledSets" : "1000",
 
 
@@ -35,7 +35,7 @@
 
 
 
-	"programDir" : "/share/quonlab/workspaces/tmathieu/meyers/",
+	"programDir" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/",
 
 		"Appended folders program" : "To programDir",
 
