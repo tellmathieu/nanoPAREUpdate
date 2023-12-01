@@ -1,11 +1,14 @@
 #!/bin/bash
 
-shuffle=$1
-sRna=$2
-numShuffledSets=$3
+sRna=$1
+numShuffledSets=$2
+gstarsh=$3
+dataShuffleDir=$4
+gstar_prog=$5
+transcriptome=$6
+dataDir=$7
 
-python3 $shuffle $sRna $numShuffledSets
-#python3 shuffle sRna numShuffledSets
+bash $gstarsh $dataShuffleDir $sRna $gstar_prog $transcriptome $dataDir
 
 #fileNames=($(cat $1 | awk '{ print $2 }' | sort | uniq))
 

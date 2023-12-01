@@ -14,25 +14,31 @@ args = commandArgs(trailingOnly=TRUE)
 #     1. Graphs illustrating cumulative fractions of fold-changes and Allen scores of shuffled and non-shuffled sRNAs being tested
 #     2. Tab-delimited files of various statistics, including p-values, for all detected sites
 
-if (length(args) != 4) {
-  stop("Four arguments are required", call.=FALSE)
-} else if (length(args)==4) {
+if (length(args) != 7) {
+  stop("Six arguments are required", call.=FALSE)
+} else if (length(args)==7) {
   name = args[1]
   dir = args[2]
   suff = args[3]
   dataRoot = args[4]
+  numShuffledSets = args[5]
+  resultsRoot = args[6]
+  folderName = args[7]
 }
 
 print(paste("sample name:",name))
 print(paste("directory:",dir))
 print(paste("file ending:",suff))
-print(paste("Working directory:",dataRoot))
+print(paste("Resource directory:",dataRoot))
+print(paste("Working directory:",resultsRoot))
+print(paste("Number of shuffled files:",numShuffledSets))
 
-setwd(dataRoot)
-dir.create(file.path(dataRoot,"graphs"))
-printRoot = paste(dataRoot,"graphs",sep="")
-dir.create(file.path(printRoot,dir,"cdfs/"))
-dir.create(file.path(dataRoot,"results"))
+
+setwd(resultsRoot)
+dir.create(file.path(resultsRoot,"graphs", fsep =""))
+printRoot = paste(resultsRoot,"graphs",sep="")
+dir.create(file.path(printRoot,"cdfs/", fsep =""))
+# dir.create(file.path(resultsRoot,"results", fsep ="")) Mathieu - removed because I slightly changed the architecture
 
 library(stringr)
 library(survcomp)
@@ -71,7 +77,7 @@ get.detected.sites <- function(dir,sample,suff,window,sRNA.df,shuff.num) {
   
   #get df of fc and Allen frequencies
   test=data.frame()
-  test = read.delim(paste(dataRoot,'results/',dir,'/',sample,'/anno.mir.tas.fa.GSTAr_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  test = read.delim(paste(resultsRoot,folderName,'/',sample,'/anno.mir.tas.fa_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
   ##subset for specific sRNA isoforms
   test = subset(test, sRNA %in% rownames(sRNA.df))
   
@@ -131,7 +137,7 @@ get.detected.sites <- function(dir,sample,suff,window,sRNA.df,shuff.num) {
   shuff = data.frame()
   shuff = as.data.frame(setNames(replicate(length(names(test)),numeric(0), simplify = F), names(names(test))))
   for (i in 0:(shuff.num-1)) {
-    shuff.sub = read.delim(paste(dataRoot,'results/',dir,'/',sample,'/anno.mir.tas.',i,'.shuffled.fa.GSTAr_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+    shuff.sub = read.delim(paste(resultsRoot,folderName,'/',sample,'/anno.mir.tas.',i,'.shuffled.fa_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
     shuff.sub = subset(shuff.sub, sRNA %in% rownames(sRNA.df))
     shuff = rbind(shuff,shuff.sub)
   }
@@ -242,10 +248,10 @@ get.target.sites <- function(dir,sites,sample.name) {
   return(list(final.plus,sig.hits))
 }
 
-get.tars <- function(dir,sample,suff,sRNAs) {
+get.tars <- function(dir,sample,suff,sRNAs, numShuffledSets) {
 
-  detected.sites.50 = get.detected.sites(dir,sample,suff,50,sRNAs,1000)
-  detected.sites.20 = get.detected.sites(dir,sample,suff,20,sRNAs,1000)
+  detected.sites.50 = get.detected.sites(dir,sample,suff,50,sRNAs,numShuffledSets)
+  detected.sites.20 = get.detected.sites(dir,sample,suff,20,sRNAs,numShuffledSets)
   
   detected.tars.50 = get.target.sites(dir,detected.sites.50,paste(sample,'.50',sep=''))
   detected.tars.20 = get.target.sites(dir,detected.sites.20,paste(sample,'.20',sep=''))
@@ -363,7 +369,7 @@ print.tables <- function(df.total,outFile) {
   
   df.total.new = df.total.new[order(df.total.new$adj.p.val),]
   
-  write.table(df.total.new, file=paste(dataRoot,'/results/',outFile,'.detected.sites.tsv',sep=''), quote=FALSE, row.names=FALSE, col.names=TRUE, sep='\t')
+  write.table(df.total.new, file=paste(resultsRoot,outFile,'.detected.sites.tsv',sep=''), quote=FALSE, row.names=FALSE, col.names=TRUE, sep='\t')
 }
 #########################################################################################################
 
@@ -373,13 +379,13 @@ anno.miRNAs = get.sRNAs.anno('miRNA')
 anno.tasiRNAs = get.sRNAs.anno('tasiRNA')
 
 print("Testing for tasiRNA targets...")
-sample.tas = get.tars(dir,name,suff,anno.tasiRNAs)
+sample.tas = get.tars(folderName,name,suff,anno.tasiRNAs,numShuffledSets)
 print("Testing for miRNA targets...")
-sample.mir = get.tars(dir,name,suff,anno.miRNAs)
+sample.mir = get.tars(folderName,name,suff,anno.miRNAs,numShuffledSets)
 
 #write to tsv files
 print("Writing to outfiles...")
 ##tasiRNAs
-print.tables(sample.tas[[1]],paste(dir,'/',name,'/',name,'.anno.tas.allen',sep=''))
+print.tables(sample.tas[[1]],paste(folderName,'/',name,'/',name,'.anno.tas.allen',sep=''))
 ##miRNAs
-print.tables(sample.mir[[1]],paste(dir,'/',name,'/',name,'.anno.mir.allen',sep=''))
+print.tables(sample.mir[[1]],paste(folderName,'/',name,'/',name,'.anno.mir.allen',sep=''))

@@ -9,6 +9,9 @@ import sys, random
 
 inFile = sys.argv[1].strip()
 shuffNum = int(sys.argv[2].strip())
+dataDir = sys.argv[3].strip() #Mathieu added this to specify where these files go.
+inFileName = inFile.split("/")[-1]
+
 
 #read in .fa file
 ifh = open(inFile)
@@ -16,7 +19,7 @@ inLines = ifh.readlines()
 ifh.close()
 
 for j in range(0,shuffNum):
-    outFile = inFile.split('.fa')[0] + '.' + str(j) + '.shuffled.fa'
+    outFile = dataDir + inFileName.split('.fa')[0] + '.' + str(j) + '.shuffled.fa'
     ofh = open(outFile,'w')
 
     for i in range(0,len(inLines),2):
@@ -30,3 +33,4 @@ for j in range(0,shuffNum):
         print(seq_shuffled, file=ofh) # same for this one >>ofh,seq_shuffled
     
 ofh.close()
+

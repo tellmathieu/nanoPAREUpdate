@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cluster nodes: 12
+Job stats:
+job          count
+---------  -------
+all              1
+endCut_sh        1
+total            2
+
+Select jobs to execute...
+
+[Thu Nov 30 16:08:06 2023]
+rule endCut_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt
+    threads: 12
+    resources: mem_mb=500000, mem_mib=476838, disk_mb=1000, disk_mib=954, tmpdir=<TBD>
+
+Submitted job 1 with external jobid 'Submitted batch job 60400726'.
+Terminating processes on user request, this might take some time.
+No --cluster-cancel given. Will exit after finishing currently running jobs.
+Complete log: .snakemake/log/2023-11-30T160804.874505.snakemake.log

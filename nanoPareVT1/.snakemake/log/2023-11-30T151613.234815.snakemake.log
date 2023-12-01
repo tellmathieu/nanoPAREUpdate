@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+endCut_sh        1
+total            2
+
+Select jobs to execute...
+
+[Thu Nov 30 15:16:15 2023]
+rule endCut_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt; Code has changed since last execution; Params have changed since last execution
+    threads: 12
+    resources: tmpdir=/tmp
+
+
+		bash runEndCutBash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 1000 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_GSTAr_v02.sh /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/ /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/GSTAr.pl /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta /share/quonlab/workspaces/tmathieu/meyersData/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Thu Nov 30 15:17:59 2023]
+Error in rule endCut_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt
+    shell:
+        
+		bash runEndCutBash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 1000 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_GSTAr_v02.sh /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/ /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/GSTAr.pl /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta /share/quonlab/workspaces/tmathieu/meyersData/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-11-30T151613.234815.snakemake.log
