@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_collapse            1
+Gstar_endtime             1
+all                       1
+endCutGstar_sh            2
+endCutNormalize_sh        1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                     9
+
+Select jobs to execute...
+
+[Sat Dec  9 22:01:18 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 14
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+RuleException in rule endCutGstar_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 219:
+NameError: The name 'if ($9 <= 6' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+		mkdir -p {params.gstarDir}/{wildcards.miRShuffled}
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a {params.dataShuffleDir}/{wildcards.miRShuffled}.fa {params.transcriptomeFASTA} > {params.bedgraphDir}/{wildcards.miRShuffled}.GSTAr
+
+		rm -r {params.gstarDir}/{wildcards.miRShuffled}
+
+		awk 'NR > 8' {params.gstarDir}/{wildcards.miRShuffled}.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > {params.bedgraphDir}/{wildcards.miRShuffled}.pred.sites.bed
+		
+		

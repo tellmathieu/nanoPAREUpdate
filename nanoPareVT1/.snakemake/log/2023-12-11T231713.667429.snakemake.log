@@ -1,0 +1,240 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+Sparta_collapse         1
+Sparta_endtime          1
+all                     1
+endCutShuffle_sh        1
+total                   4
+
+Select jobs to execute...
+
+[Mon Dec 11 23:17:15 2023]
+checkpoint endCutShuffle_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+    jobid: 3
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+    threads: 48
+    resources: tmpdir=/tmp
+DAG of jobs will be updated after completion.
+
+
+		st=`date +%s`
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 2 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+		et=`date +%s`
+		rt=$et-$st
+		echo "//////////ENDCUT_SHUFFLE_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+[Mon Dec 11 23:17:18 2023]
+Finished job 3.
+1 of 4 steps (25%) done
+Select jobs to execute...
+
+[Mon Dec 11 23:17:18 2023]
+rule Sparta_starttime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    jobid: 7
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    resources: tmpdir=/tmp
+
+
+		export st=`date +%s`
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+		
+[Mon Dec 11 23:17:18 2023]
+Finished job 7.
+2 of 7 steps (29%) done
+Select jobs to execute...
+
+[Mon Dec 11 23:17:18 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.0.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+[Mon Dec 11 23:17:18 2023]
+Error in rule endCutSparta_sh:
+    jobid: 6
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 6.
+Select jobs to execute...
+
+[Mon Dec 11 23:17:18 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.0.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+[Mon Dec 11 23:17:19 2023]
+Error in rule endCutSparta_sh:
+    jobid: 6
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 6.
+Select jobs to execute...
+
+[Mon Dec 11 23:17:19 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.0.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+[Mon Dec 11 23:17:19 2023]
+Error in rule endCutSparta_sh:
+    jobid: 6
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.0.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.0.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Select jobs to execute...
+
+[Mon Dec 11 23:17:19 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+[Mon Dec 11 23:17:19 2023]
+Error in rule endCutSparta_sh:
+    jobid: 8
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 8.
+Select jobs to execute...
+
+[Mon Dec 11 23:17:19 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+[Mon Dec 11 23:17:19 2023]
+Error in rule endCutSparta_sh:
+    jobid: 8
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 8.
+Select jobs to execute...
+
+[Mon Dec 11 23:17:19 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+[Mon Dec 11 23:17:19 2023]
+Error in rule endCutSparta_sh:
+    jobid: 8
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/SpartaSnakemake_1/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --tag2FASTA --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-11T231713.667429.snakemake.log

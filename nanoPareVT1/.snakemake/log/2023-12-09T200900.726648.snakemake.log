@@ -1,0 +1,44 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_collapse            1
+Gstar_endtime             1
+all                       1
+endClass_sh               1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+endGraph_sh               1
+endMap_sh                 1
+endMask_sh                1
+setup_sh                  1
+total                    13
+
+Select jobs to execute...
+
+[Sat Dec  9 20:09:02 2023]
+rule setup_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /nanoPareVT1/setupDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+    jobid: 8
+    reason: Missing output files: /nanoPareVT1/setupDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+RuleException in rule setup_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 19:
+NameError: The name 'rt' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+			st=`date +%s`
+			python3 {params.createRefTable} {input.fastqDir} {params.refTable} {params.seq_run} {params.adapter_seq}
+			bash {params.setup} -R {params.refTable} -G {params.genomeFasta} -A {params.genomeAnnotation} --ram {params.ram} --cpus {params.cpu} --gtf_gene_tag {params.gtf_gene_tag} --gtf_transcript_tag {params.gtf_transcript_tag}
+			echo DONE > {output.setup}
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////SETUP_DONE (${rt} s)" > {output.runtime_log}
+		

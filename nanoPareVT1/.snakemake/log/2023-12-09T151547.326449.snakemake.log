@@ -1,0 +1,3 @@
+WildcardError in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 221:
+No values given for wildcard 'miRShuffled'.
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk", line 221, in <module>

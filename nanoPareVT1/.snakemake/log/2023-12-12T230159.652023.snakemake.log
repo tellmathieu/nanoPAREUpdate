@@ -1,0 +1,256 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+Sparta_collapse         1
+Sparta_endtime          1
+Sparta_starttime        1
+all                     1
+endClass_sh             1
+endCutSparta_sh         2
+endGraph_sh             1
+endMap_sh               1
+endMask_sh              1
+total                  10
+
+Select jobs to execute...
+
+[Tue Dec 12 23:02:01 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    jobid: 9
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+			st=`date +%s`
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference_sparta1.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference_sparta1.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --icomp 0
+				let line++
+			done
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////ENDMAP_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+		
+[Tue Dec 12 23:06:42 2023]
+Finished job 9.
+1 of 10 steps (10%) done
+Select jobs to execute...
+
+[Tue Dec 12 23:06:42 2023]
+rule endGraph_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash endGraphBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference_sparta1.table /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endGraph.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff 30 48 laplace 15 200
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDGRAPH_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+		
+[Tue Dec 12 23:07:46 2023]
+Finished job 8.
+2 of 10 steps (20%) done
+Select jobs to execute...
+
+[Tue Dec 12 23:07:46 2023]
+rule endClass_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+    jobid: 7
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference_sparta1.table /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endClass.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff 48 0.1 500
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCLASS_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+		
+[Tue Dec 12 23:07:54 2023]
+Finished job 7.
+3 of 10 steps (30%) done
+Select jobs to execute...
+
+[Tue Dec 12 23:07:54 2023]
+rule endMask_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash endMaskBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference_sparta1.table /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMask.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff 48
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDMASK_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+		
+[Tue Dec 12 23:08:08 2023]
+Finished job 6.
+4 of 10 steps (40%) done
+Select jobs to execute...
+
+[Tue Dec 12 23:08:08 2023]
+rule Sparta_starttime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    jobid: 5
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    resources: tmpdir=/tmp
+
+
+		export st=`date +%s`
+		echo "//////////ENDCUT_SPARTA_START_TIME_DONE ($st s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+		
+[Tue Dec 12 23:08:08 2023]
+Finished job 5.
+5 of 10 steps (50%) done
+Select jobs to execute...
+
+[Tue Dec 12 23:08:08 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt
+    jobid: 12
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    wildcards: miRShuffled=anno.mir.tas.zero_.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa -tarPred H -tarScore S --map2DD
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 242:
+Job 12  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt
+Trying to restart job 12.
+Select jobs to execute...
+
+[Tue Dec 12 23:08:20 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt
+    jobid: 12
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    wildcards: miRShuffled=anno.mir.tas.zero_.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa -tarPred H -tarScore S --map2DD
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 242:
+Job 12  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt
+Trying to restart job 12.
+Select jobs to execute...
+
+[Tue Dec 12 23:08:31 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt
+    jobid: 12
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    wildcards: miRShuffled=anno.mir.tas.zero_.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa -tarPred H -tarScore S --map2DD
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 242:
+Job 12  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.txt
+Select jobs to execute...
+
+[Tue Dec 12 23:08:43 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt
+    jobid: 13
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --map2DD
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 242:
+Job 13  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt
+Trying to restart job 13.
+Select jobs to execute...
+
+[Tue Dec 12 23:08:55 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt
+    jobid: 13
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --map2DD
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 242:
+Job 13  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt
+Trying to restart job 13.
+Select jobs to execute...
+
+[Tue Dec 12 23:09:06 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt
+    jobid: 13
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --map2DD
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 242:
+Job 13  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.txt
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-12T230159.652023.snakemake.log

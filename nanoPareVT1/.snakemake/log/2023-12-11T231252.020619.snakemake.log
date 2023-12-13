@@ -1,0 +1,3 @@
+KeyError in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 37:
+'runtime_log_sparta'
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk", line 37, in <module>

@@ -1,0 +1,211 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_endtime             1
+all                       1
+endCutNormalize_sh        1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                     6
+
+Select jobs to execute...
+
+[Sun Dec 10 13:22:42 2023]
+rule Gstar_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    jobid: 5
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+[Sun Dec 10 13:22:42 2023]
+Finished job 5.
+1 of 6 steps (17%) done
+Select jobs to execute...
+
+[Sun Dec 10 13:22:42 2023]
+rule endCutNormalize_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutNormDone.txt
+    jobid: 4
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutNormDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		
+		bash runEndCutNormalizeBash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02_normalize.sh /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_NORMALIZE_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutNormDone.txt
+		
+[Sun Dec 10 13:22:42 2023]
+Finished job 4.
+2 of 6 steps (33%) done
+Select jobs to execute...
+
+[Sun Dec 10 13:22:42 2023]
+rule endCutStep1WIN1_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutNormDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1Done.txt
+    jobid: 3
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1Done.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutNormDone.txt; Set of input files has changed since last execution; Code has changed since last execution; Params have changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash runEndCutStep1Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02.sh /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData 20 transcript_bedgraph_capmasked transcript.capmasked /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP1_WIN1_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1Done.txt
+		
+[Sun Dec 10 13:22:43 2023]
+Finished job 3.
+3 of 6 steps (50%) done
+Select jobs to execute...
+
+[Sun Dec 10 13:22:43 2023]
+rule endCutStep1WIN2_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    jobid: 2
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1Done.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash runEndCutStep1Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02.sh /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData 50 transcript_bedgraph_capmasked transcript.capmasked /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP1_WIN2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+		
+[Sun Dec 10 13:22:43 2023]
+Finished job 2.
+4 of 6 steps (67%) done
+Select jobs to execute...
+
+[Sun Dec 10 13:22:43 2023]
+rule endCutStep2_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked 2 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+		
+[Sun Dec 10 13:22:58 2023]
+Error in rule endCutStep2_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+    shell:
+        
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked 2 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 1.
+Select jobs to execute...
+
+[Sun Dec 10 13:22:58 2023]
+rule endCutStep2_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked 2 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+		
+[Sun Dec 10 13:23:08 2023]
+Error in rule endCutStep2_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+    shell:
+        
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked 2 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 1.
+Select jobs to execute...
+
+[Sun Dec 10 13:23:08 2023]
+rule endCutStep2_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked 2 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+		
+[Sun Dec 10 13:23:18 2023]
+Error in rule endCutStep2_sh:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2Done.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+    shell:
+        
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table /share/quonlab/workspaces/tmathieu/meyersData transcript_bedgraph_capmasked transcript.capmasked 2 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutStep2Done.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-10T132240.318995.snakemake.log

@@ -1,0 +1,94 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_collapse            1
+Gstar_endtime             1
+all                       1
+endClass_sh               1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+endGraph_sh               1
+endMap_sh                 1
+endMask_sh                1
+setup_sh                  1
+total                    13
+
+Select jobs to execute...
+
+[Sun Dec 10 18:07:17 2023]
+rule setup_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQsmg
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt; Params have changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+			st=`date +%s`
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQsmg /share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --gtf_gene_tag gene_id --gtf_transcript_tag transcript_id
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////SETUP_DONE ($rt s)" > /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar_smg.log
+		
+[Sun Dec 10 18:07:21 2023]
+Finished job 8.
+1 of 13 steps (8%) done
+Select jobs to execute...
+
+[Sun Dec 10 18:07:21 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    jobid: 12
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+			st=`date +%s`
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --icomp 0
+				let line++
+			done
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////ENDMAP_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar_smg.log
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Sun Dec 10 18:07:34 2023]
+Error in rule endMap_sh:
+    jobid: 12
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    shell:
+        
+			st=`date +%s`
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --icomp 0
+				let line++
+			done
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////ENDMAP_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar_smg.log
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-12-10T180715.177114.snakemake.log

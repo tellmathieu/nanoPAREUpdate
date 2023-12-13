@@ -1,0 +1,3 @@
+TypeError in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 263:
+temp() got an unexpected keyword argument 'doneFile'
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk", line 263, in <module>

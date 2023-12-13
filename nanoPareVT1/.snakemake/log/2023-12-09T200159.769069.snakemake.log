@@ -1,0 +1,8 @@
+Building DAG of jobs...
+InputFunctionException in rule Gstar_collapse in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 264:
+Error:
+  AttributeError: 'Wildcards' object has no attribute 'miRShuffled'
+Wildcards:
+
+Traceback:
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk", line 259, in aggregate_input

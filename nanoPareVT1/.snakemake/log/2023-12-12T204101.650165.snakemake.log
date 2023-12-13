@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule Sparta_starttime in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 223:
+Missing input files for rule Sparta_starttime:
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    affected files:
+        /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt

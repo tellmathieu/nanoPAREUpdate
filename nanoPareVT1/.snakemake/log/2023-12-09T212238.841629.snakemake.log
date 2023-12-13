@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule endCutShuffle_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 182:
+Missing input files for rule endCutShuffle_sh:
+    output: /shuffleDirGSTArNew
+    affected files:
+        /nanoPareVT1/setupDone.txt

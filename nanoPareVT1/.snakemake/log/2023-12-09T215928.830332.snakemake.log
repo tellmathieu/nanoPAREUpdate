@@ -1,0 +1,66 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_collapse            1
+Gstar_endtime             1
+all                       1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                     8
+
+Select jobs to execute...
+
+[Sat Dec  9 21:59:30 2023]
+checkpoint endCutShuffle_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew
+    jobid: 7
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+DAG of jobs will be updated after completion.
+
+
+		st=`date +%s`
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 2 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew
+		et=`date +%s`
+		rt=$et-$st
+		echo "//////////ENDCUT_SHUFFLE_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+[Sat Dec  9 21:59:31 2023]
+Finished job 7.
+1 of 8 steps (12%) done
+Select jobs to execute...
+
+[Sat Dec  9 21:59:31 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 15
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+RuleException in rule endCutGstar_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 219:
+AttributeError: 'Params' object has no attribute 'dataShuffledDir', when formatting the following:
+
+		mkdir -p {params.gstarDir}/{wildcards.miRShuffled}
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a {params.dataShuffledDir}/{wildcards.miRShuffled}.fa {params.transcriptomeFASTA} > {params.bedgraphDir}/{wildcards.miRShuffled}.GSTAr
+
+		rm -r {params.gstarDir}/{wildcards.miRShuffled}
+
+		awk 'NR > 8' {params.gstarDir}/{wildcards.miRShuffled}.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > {params.bedgraphDir}/{wildcards.miRShuffled}.pred.sites.bed
+		
+		

@@ -1,0 +1,82 @@
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+####################################
+### SETUP: GENERATE GENOME INDEX ###
+####################################
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/fasta_lengths.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta > /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table
+Length table generated.
+ 
+STAR --runThreadN 48 --runMode genomeGenerate --genomeDir /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/genome_index --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log/ --genomeFastaFiles /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta --genomeSAindexNbases 8 --sjdbGTFfile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --sjdbGTFtagExonParentTranscript transcript_id --sjdbGTFtagExonParentGene gene_id
+	/share/quonlab/workspaces/tmathieu/miniforge3/envs/nanopare4/bin/STAR-avx --runThreadN 48 --runMode genomeGenerate --genomeDir /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/genome_index --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log/ --genomeFastaFiles /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta --genomeSAindexNbases 8 --sjdbGTFfile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --sjdbGTFtagExonParentTranscript transcript_id --sjdbGTFtagExonParentGene gene_id
+	STAR version: 2.7.11a   compiled: 2023-09-15T03:01:31+0000 :/opt/conda/conda-bld/star_1694746407721/work/source
+Dec 06 23:56:01 ..... started STAR run
+Dec 06 23:56:01 ... starting to generate Genome files
+Dec 06 23:56:01 ..... processing annotations GTF
+Dec 06 23:56:01 ... starting to sort Suffix Array. This may take a long time...
+Dec 06 23:56:01 ... sorting Suffix Array chunks and saving them to disk...
+Dec 06 23:56:01 ... loading chunks from disk, packing SA...
+Dec 06 23:56:01 ... finished generating suffix array
+Dec 06 23:56:01 ... generating Suffix Array index
+Dec 06 23:56:01 ... completed Suffix Array index
+Dec 06 23:56:01 ..... inserting junctions into the genome indices
+Dec 06 23:56:02 ... writing Genome to disk ...
+Dec 06 23:56:02 ... writing Suffix Array to disk ...
+Dec 06 23:56:02 ... writing SAindex to disk
+Dec 06 23:56:02 ..... finished successfully
+Genome index complete.
+ 
+### GENERATE TSO MASKING FILES ###
+SEARCH: GGG,CAGG,CGAG,CGGA,ACGGG
+Ath_chr2 (GGG,CAGG,CGAG,CGGA,ACGGG) started.
+Ath_chr2 hits: 31314
+Sequence search complete.
+Masking BED files generated.
+ 
+Generating transcriptome FASTA file.
+### GENERATE ANNOTATION CLASS REFERENCE FILES ###
+   Getting transcript-level exons
+   Getting 5'-most exons
+   Converting transcript-level to gene-level annotations
+   Reformatting to GFF files to BED files
+   Reformatting to GFF files to BED files
+   Cleaning up temporary files
+Setup complete.

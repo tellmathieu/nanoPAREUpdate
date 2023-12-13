@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule Gstar_endtime in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 273:
+Missing input files for rule Gstar_endtime:
+    output: /nanoPareVT1/endCutGstarDone.txt
+    affected files:
+        /nanoPareVT1/endCutGstarCollapseDone.txt

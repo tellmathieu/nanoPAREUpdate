@@ -32,13 +32,38 @@ print(paste("file ending:",suff))
 print(paste("Resource directory:",dataRoot))
 print(paste("Working directory:",resultsRoot))
 print(paste("Number of shuffled files:",numShuffledSets))
+print(paste("Folder Name:",folderName))
 
 
 setwd(resultsRoot)
-dir.create(file.path(resultsRoot,"graphs", fsep =""))
+
+#if (dir.exists(file.path(resultsRoot,"graphs", fsep =""))){ 
+#  print( paste("Directory exists: ", file.path(resultsRoot,"graphs", fsep =""))) 
+#} else {
+#  dir.create(file.path(resultsRoot,"graphs", fsep =""))
+#}
+
 printRoot = paste(resultsRoot,"graphs",sep="")
-dir.create(file.path(printRoot,"cdfs/", fsep =""))
-# dir.create(file.path(resultsRoot,"results", fsep ="")) Mathieu - removed because I slightly changed the architecture
+
+#if (dir.exists(file.path(printRoot,"cdfs/", fsep =""))){ 
+#    print( paste("Directory exists: ", file.path(printRoot,"cdfs/", fsep =""))) 
+#} else {
+#  dir.create(file.path(printRoot,"cdfs/", fsep =""))
+#}
+
+#if (dir.exists(file.path(resultsRoot,"results", fsep =""))){ 
+#    print( paste("Directory exists: ", file.path(resultsRoot,"results", fsep =""))) 
+#} else {
+#  dir.create(file.path(resultsRoot,"results", fsep ="")) 
+#}
+
+if (dir.exists(file.path(dir,'/cdfs', fsep =""))){ 
+  print( paste("Directory exists: ", file.path(dir,'/cdfs', fsep =""))) 
+} else {
+  dir.create(file.path(dir,'/cdfs', fsep =""))
+}
+
+
 
 library(stringr)
 library(survcomp)
@@ -82,7 +107,7 @@ get.detected.sites <- function(dir,sample,suff,window,sRNA.df,shuff.num) {
   test = subset(test, sRNA %in% rownames(sRNA.df))
   
   #sort by Allen, rpm and sRNA
-  test = test[order(test$AllenScore,test$slice.site.rpm,test$sRNA, decreasing=c(FALSE,TRUE,FALSE)),]
+  test = test[order(test$AllenScore,test$slice.site.rpm,test$sRNA, decreasing=c(FALSE,TRUE,FALSE),method="radix"),] # Mathieu added radix method
   
   #build slice site identifier, calculate new fold-change (with pseudocount) and generate AGI column
   if (length(test$Transcript) > 0) {
@@ -180,7 +205,7 @@ get.target.sites <- function(dir,sites,sample.name) {
 
   test = sites[[1]]
   shuff = sites[[2]]
-  
+
   #for each sRNA, extract fc and allen vals from corresponding shuffled sets,
   #combine and generate ecdf, compute p-vals and plot graphs
   ##get all unique sRNAs
@@ -189,44 +214,56 @@ get.target.sites <- function(dir,sites,sample.name) {
   ##for each sRNA, extract dfs and add to lists
   sRNA.shuff.list = list()
   sRNA.test.list = list()
-  
+
   for (sRNA.u in sRNA.v) {
     sRNA.test = subset(test, sRNA == sRNA.u)
     sRNA.test.list[[sRNA.u]] = sRNA.test
     sRNA.shuff = subset(shuff, sRNA == sRNA.u)
     sRNA.shuff.list[[sRNA.u]] = sRNA.shuff
   }
-  
+
   ##for each sRNA, generate fc and Allen ecdfs with shuffled set and compute p-values for each detected sRNA:target in tests
   extra.names = c('fc.p.val','allen.p.val')
   final = as.data.frame(setNames(replicate(length(c(names(test),extra.names)),numeric(0), simplify = F), c(names(test),extra.names)))
   
   for (sRNA.u in sRNA.v) {
+    
     ind.test = sRNA.test.list[[sRNA.u]]
     ind.shuff = sRNA.shuff.list[[sRNA.u]]
+    
     #compute p.vals
-    fc.p.val = 1 - ecdf(ind.shuff$fc.new)(ind.test$fc.new)
-    allen.p.val = ecdf(ind.shuff$AllenScore)(ind.test$AllenScore)
+
+    if(length(ind.shuff$fc.new)> 0 & length(ind.shuff$AllenScore)> 0) {
+
+      fc.p.val = 1 - ecdf(ind.shuff$fc.new)(ind.test$fc.new)
+      allen.p.val = ecdf(ind.shuff$AllenScore)(ind.test$AllenScore)
     
-    final = rbind(final,data.frame(subset(test,sRNA==sRNA.u),'fc.p.val'=fc.p.val,'allen.p.val'=allen.p.val))
+      final = rbind(final,data.frame(subset(test,sRNA==sRNA.u),'fc.p.val'=fc.p.val,'allen.p.val'=allen.p.val))
     
-    plotFile=paste(printRoot,'/',dir,'/cdfs/',sRNA.u,'.',sample.name,'.fc.ecdf.pdf',sep='')
-    pdf(plotFile, useDingbats=FALSE, width=5, height=8)
-    par(mfrow = c(2,1))
-    plot(NULL, main=paste('Detected', sRNA.u, 'sites in',sample.name), xlab='Fold-changes', ylab='Proportion', las=1, xlim=c(0,max(c(ind.shuff$fc.new,ind.test$fc.new),na.rm=T)), ylim=c(0,1.0))
-    lines(ecdf(ind.shuff$fc.new), pch=1)
-    color='coral'
-    points(ind.test$fc.new,ecdf(ind.shuff$fc.new)(ind.test$fc.new), pch=19, col=color)
-    legend(x='bottomright', legend=c(paste('Test (n = ',length(rownames(ind.test)),')',sep=''),paste('Shuffled (n = ',length(rownames(ind.shuff)),')',sep='')), col=c(color,'black'), bty='n', pch=c(19,1))
-    text(ind.test$fc.new,ecdf(ind.shuff$fc.new)(ind.test$fc.new),labels=paste(ind.test$Transcript,'/',ind.test$common.name,sep=''),col=color,pos=1,cex=0.6)
     
-    plot(NULL, main=NULL, xlab='Allen Scores', ylab='Proportion', las=1, xlim=c(0,max(c(ind.shuff$AllenScore,ind.test$AllenScore),na.rm=T)), ylim=c(0,1.0))
-    lines(ecdf(ind.shuff$AllenScore), pch=1)
-    color='slateblue'
-    points(ind.test$AllenScore,ecdf(ind.shuff$AllenScore)(ind.test$AllenScore), pch=19, col=color)
-    text(ind.test$AllenScore,ecdf(ind.shuff$AllenScore)(ind.test$AllenScore),labels=paste(ind.test$Transcript,'/',ind.test$common.name,sep=''),col=color,pos=3,cex=0.6)
-    legend(x='topleft', legend=c(paste('Test (n = ',length(rownames(ind.test)),')',sep=''),paste('Shuffled (n = ',length(rownames(ind.shuff)),')',sep='')), col=c(color,'black'), bty='n', pch=c(19,1) )
-    dev.off()
+      sRNA.u1 <- gsub("'","", sRNA.u) #Mathieu added to be able to create files
+      
+
+      plotFile=paste(resultsRoot,dir,'/',name,'/cdfs/',sRNA.u1,'.',sample.name,'.fc.ecdf.pdf',sep='')
+
+      pdf(plotFile, useDingbats=FALSE, width=5, height=8)
+      paste(print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"))
+      par(mfrow = c(2,1))
+      plot(NULL, main=paste('Detected', sRNA.u, 'sites in',sample.name), xlab='Fold-changes', ylab='Proportion', las=1, xlim=c(0,max(c(ind.shuff$fc.new,ind.test$fc.new),na.rm=T)), ylim=c(0,1.0))
+      lines(ecdf(ind.shuff$fc.new), pch=1)
+      color='coral'
+      points(ind.test$fc.new,ecdf(ind.shuff$fc.new)(ind.test$fc.new), pch=19, col=color)
+      legend(x='bottomright', legend=c(paste('Test (n = ',length(rownames(ind.test)),')',sep=''),paste('Shuffled (n = ',length(rownames(ind.shuff)),')',sep='')), col=c(color,'black'), bty='n', pch=c(19,1))
+      text(ind.test$fc.new,ecdf(ind.shuff$fc.new)(ind.test$fc.new),labels=paste(ind.test$Transcript,'/',ind.test$common.name,sep=''),col=color,pos=1,cex=0.6)
+    
+      plot(NULL, main=NULL, xlab='Allen Scores', ylab='Proportion', las=1, xlim=c(0,max(c(ind.shuff$AllenScore,ind.test$AllenScore),na.rm=T)), ylim=c(0,1.0))
+      lines(ecdf(ind.shuff$AllenScore), pch=1)
+      color='slateblue'
+      points(ind.test$AllenScore,ecdf(ind.shuff$AllenScore)(ind.test$AllenScore), pch=19, col=color)
+      text(ind.test$AllenScore,ecdf(ind.shuff$AllenScore)(ind.test$AllenScore),labels=paste(ind.test$Transcript,'/',ind.test$common.name,sep=''),col=color,pos=3,cex=0.6)
+      legend(x='topleft', legend=c(paste('Test (n = ',length(rownames(ind.test)),')',sep=''),paste('Shuffled (n = ',length(rownames(ind.shuff)),')',sep='')), col=c(color,'black'), bty='n', pch=c(19,1) )
+      dev.off()
+    }
   }
   
   #combine p-values Fishers method
@@ -252,7 +289,6 @@ get.tars <- function(dir,sample,suff,sRNAs, numShuffledSets) {
 
   detected.sites.50 = get.detected.sites(dir,sample,suff,50,sRNAs,numShuffledSets)
   detected.sites.20 = get.detected.sites(dir,sample,suff,20,sRNAs,numShuffledSets)
-  
   detected.tars.50 = get.target.sites(dir,detected.sites.50,paste(sample,'.50',sep=''))
   detected.tars.20 = get.target.sites(dir,detected.sites.20,paste(sample,'.20',sep=''))
   
@@ -379,9 +415,9 @@ anno.miRNAs = get.sRNAs.anno('miRNA')
 anno.tasiRNAs = get.sRNAs.anno('tasiRNA')
 
 print("Testing for tasiRNA targets...")
-sample.tas = get.tars(folderName,name,suff,anno.tasiRNAs,numShuffledSets)
+sample.tas = get.tars(folderName,name,suff,anno.tasiRNAs,as.integer(numShuffledSets))
 print("Testing for miRNA targets...")
-sample.mir = get.tars(folderName,name,suff,anno.miRNAs,numShuffledSets)
+sample.mir = get.tars(folderName,name,suff,anno.miRNAs,as.integer(numShuffledSets))
 
 #write to tsv files
 print("Writing to outfiles...")

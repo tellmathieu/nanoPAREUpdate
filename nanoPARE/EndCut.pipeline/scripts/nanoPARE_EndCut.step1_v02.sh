@@ -9,8 +9,8 @@ export outDir_s=transcript_bedgraph_capmasked
 export sample_name=$1
 export WSEQ=$2
 export WIN=$3
-export shuffledNamesDir=${WSEQ}shuffleDir
-export GSTArDir=${WSEQ}GSTAr
+export shuffledNamesDir=$7
+export GSTArDir=$6
 export outDir_s=$4
 export outDir_a=$5
 #########################################
@@ -19,12 +19,12 @@ export outDir_a=$5
 #export dataRoot=WSEQ
 #export TEST=anno.mir.tas.fa.GSTAr
 #export SHUFF=anno.mir.tas
-export BG=$WSEQ$outDir_s/${sample_name}.$outDir_a.bedgraph
+export BG=$WSEQ/$outDir_s/${sample_name}.$outDir_a.bedgraph
 export BG_norm=$BG.norm
 export BG_norm_overlap=$BG_norm.overlap
 export BG_norm_overlap_up=$BG_norm.overlap.up
 export BG_norm_overlap_down=$BG_norm.overlap.down
-export outDir=$WSEQ$outDir_s/${sample_name}/
+export outDir=$WSEQ/$outDir_s/${sample_name}/
 ########################################
 
 mkdir -p $outDir

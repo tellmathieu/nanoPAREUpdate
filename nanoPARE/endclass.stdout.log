@@ -1,0 +1,91 @@
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=-1
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=0.1
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Merging feature files...
+Bedgraph files +: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_mask.bedgraph
+Bedgraph files -: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_mask.bedgraph
+Bedgraph uuG files +: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/uG.plus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/uG.plus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/uG.plus_mask.bedgraph
+Bedgraph uuG files -: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/uG.minus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/uG.minus_mask.bedgraph /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/uG.minus_mask.bedgraph
+Merged coverage files generated.
+ 
+Finding feature peak positions.
+Locating nearest annotation to each feature:
+  overlapping single-exon transcripts
+  overlapping 5'-terminal exons
+  Between exons
+  Upstream of annotations
+  Contained within introns
+  Antisense to existing annotations
+  Antisense intronic
+Splitting capped and noncapped features...
+Loading all plus...
+Loading all minus...
+Loading uuG plus...
+Loading uuG minus...
+Evaluating features...
+# Cutoff: 0.1
+Cap masking bedgraph files...
+Internal mask: test.capped.bed
+Internal mask: test.capped.bed
+Internal mask: test.capped.bed
+Cap masking merged bedgraph...
+Internal mask: test.capped.bed
+Calculating gene-level capped and noncapped read coverage...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_mask.bedgraph...
+Loading bed features...
+Calculating coverages...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_mask.bedgraph...
+Importing /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_mask.bedgraph...
+Loading bed features...
+Calculating coverages...

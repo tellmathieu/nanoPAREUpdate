@@ -4,18 +4,19 @@
 
 	"fastaRef" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
 	"annotation" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
-	"refTable" : "/share/quonlab/workspaces/tmathieu/meyersData/reference.table",
+	"refTable" : "/share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table",
 		"seq_run_SE_or_PE" : "SE",
 		"adapter_seq" : "nextera",
-	"fastqDir" : "/share/quonlab/workspaces/tmathieu/meyersData/FASTQ/",
+	"fastqDir" : "/share/quonlab/workspaces/tmathieu/meyersData/FASTQsmg",
+	"runtime_log" : "/share/quonlab/workspaces/tmathieu/meyersData/runtimegstar_smg.log",
 	
 
-	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked",
+	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked_smg",
 	"suff" : "transcript.capmasked",
 	
 
 	"sRna" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
-	"numShuffledSets" : "2",
+	"numShuffledSets" : "1000",
 
 	"threads" : "48",
 
@@ -42,20 +43,20 @@
 		"nucleotideWIN1" : "20",
 		"nucleotideWIN2" : "50",
 
-	"programDir" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/",
+	"programDir" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate",
 
 		"Appended folders program" : "To programDir",
 
-			"nanoDir" : "nanoPARE/",
+			"nanoDir" : "nanoPARE",
 				"setupBashScript" : "nanoPARE_setup.sh",
 					"transcriptomeFASTA" : "resources/transcriptome.fasta",
 				"1endMapBashScript" : "endMap.sh",
 				"2endGraphBashScript" : "endGraph.sh",
 				"3endClassBashScript" : "endClass.sh",
 				"4endMaskBashScript" : "endMask.sh",
-					"resultsEndMask" : "results/EndMask/",
-				"5endCutPipelineDir" : "EndCut.pipeline/scripts/",
-				"5endCutResourceDir" : "EndCut.pipeline/resources/",
+					"resultsEndMask" : "results/EndMask",
+				"5endCutPipelineDir" : "EndCut.pipeline/scripts",
+				"5endCutResourceDir" : "EndCut.pipeline/resources",
 					"5.1-shuffle" : "sRNA_shuffler.py",
 					"5.2-gstar" :"nanoPARE_GSTAr_v02.sh",
 					"5.2.1-gstarprog" : "GSTAr.pl",
@@ -64,14 +65,15 @@
 					"5.5-step2" : "EndCut_step2.v03.git.R",
 
 
-			"sPARTADir" : "sPARTA/",
+			"sPARTADir" : "sPARTA",
 
-			"mainDir" : "nanoPareVT1/",
+			"mainDir" : "nanoPareVT1",
 				"createRefTable" : "python/createRefTable.py",
 
 
-	"dataDir" : "/share/quonlab/workspaces/tmathieu/meyersData/",
+	"dataDir" : "/share/quonlab/workspaces/tmathieu/meyersData",
 
 		"Appended folders program" : "To dataDir",
-			"shuffleDir" : "shuffleDir/"
+			"shuffleDir" : "shuffleDirGSTArNew_smg",
+			"GSTArDir" : "GSTArSnakemake_smg"
 }

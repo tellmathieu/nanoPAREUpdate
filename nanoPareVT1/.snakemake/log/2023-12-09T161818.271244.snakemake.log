@@ -1,0 +1,9 @@
+Building DAG of jobs...
+InputFunctionException in rule Gstar_collapse in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 263:
+Error:
+  WorkflowError:
+    Missing wildcard values for miRShuffled
+Wildcards:
+
+Traceback:
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk", line 259, in aggregate_input

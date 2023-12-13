@@ -1,0 +1,209 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+endClass_sh               1
+endCutGstar_sh            1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+endGraph_sh               1
+endMap_sh                 1
+endMask_sh                1
+setup_sh                  1
+total                    12
+
+Select jobs to execute...
+
+[Fri Dec  1 19:20:31 2023]
+rule setup_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    jobid: 7
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+			python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/python/createRefTable.py /share/quonlab/workspaces/tmathieu/meyersData/FASTQ /share/quonlab/workspaces/tmathieu/meyersData/reference.table SE nextera
+			bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/nanoPARE_setup.sh -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --gtf_gene_tag gene_id --gtf_transcript_tag transcript_id
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+		
+[Fri Dec  1 19:20:40 2023]
+Finished job 7.
+1 of 12 steps (8%) done
+Select jobs to execute...
+
+[Fri Dec  1 19:20:41 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    jobid: 11
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --icomp 0
+				let line++
+			done
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+		
+[Fri Dec  1 19:28:51 2023]
+Finished job 11.
+2 of 12 steps (17%) done
+Select jobs to execute...
+
+[Fri Dec  1 19:28:51 2023]
+rule endCutShuffle_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    jobid: 6
+    reason: Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt; Set of input files has changed since last execution; Params have changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 100 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+[Fri Dec  1 19:28:51 2023]
+Error in rule endCutShuffle_sh:
+    jobid: 6
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 100 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 6.
+Select jobs to execute...
+
+[Fri Dec  1 19:28:51 2023]
+rule endCutShuffle_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    jobid: 6
+    reason: Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt; Set of input files has changed since last execution; Params have changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 100 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+[Fri Dec  1 19:28:51 2023]
+Error in rule endCutShuffle_sh:
+    jobid: 6
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 100 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 6.
+Select jobs to execute...
+
+[Fri Dec  1 19:28:51 2023]
+rule endCutShuffle_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    jobid: 6
+    reason: Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt; Set of input files has changed since last execution; Params have changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 100 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+[Fri Dec  1 19:28:51 2023]
+Error in rule endCutShuffle_sh:
+    jobid: 6
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 100 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDir/
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Select jobs to execute...
+
+[Fri Dec  1 19:28:51 2023]
+rule endGraph_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphDone.txt
+    jobid: 10
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		bash endGraphBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endGraph.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff 30 48 laplace 15 200
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphDone.txt
+		
+[Fri Dec  1 19:29:54 2023]
+Finished job 10.
+3 of 12 steps (25%) done
+Select jobs to execute...
+
+[Fri Dec  1 19:29:54 2023]
+rule endClass_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassDone.txt
+    jobid: 9
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endGraphDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		bash getSampleTypesBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endClass.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff 48 0.1 500
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassDone.txt
+		
+[Fri Dec  1 19:30:02 2023]
+Finished job 9.
+4 of 12 steps (33%) done
+Select jobs to execute...
+
+[Fri Dec  1 19:30:02 2023]
+rule endMask_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskDone.txt
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endClassDone.txt
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		bash endMaskBash.sh /share/quonlab/workspaces/tmathieu/meyersData/reference.table /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMask.sh /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff 48
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMaskDone.txt
+		
+[Fri Dec  1 19:30:15 2023]
+Finished job 8.
+5 of 12 steps (42%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-01T192029.846190.snakemake.log

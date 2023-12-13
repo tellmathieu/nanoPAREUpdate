@@ -19,7 +19,7 @@ inLines = ifh.readlines()
 ifh.close()
 
 for j in range(0,shuffNum):
-    outFile = dataDir + inFileName.split('.fa')[0] + '.' + str(j) + '.shuffled.fa'
+    outFile = dataDir + '/' + inFileName.split('.fa')[0] + '.' + str(j) + '.shuffled.fa'
     ofh = open(outFile,'w')
 
     for i in range(0,len(inLines),2):

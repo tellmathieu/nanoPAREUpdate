@@ -1,0 +1,65 @@
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Making gene-level bed files...
+Capmasking: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+EndMask complete! See results in results/EndMask/test

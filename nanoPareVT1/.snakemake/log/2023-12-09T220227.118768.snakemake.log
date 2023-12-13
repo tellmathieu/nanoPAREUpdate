@@ -1,0 +1,275 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_collapse            1
+Gstar_endtime             1
+all                       1
+endCutGstar_sh            2
+endCutNormalize_sh        1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                     9
+
+Select jobs to execute...
+
+[Sat Dec  9 22:02:29 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 14
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+		
+		
+[Sat Dec  9 22:02:29 2023]
+Error in rule endCutGstar_sh:
+    jobid: 14
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+		
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 14.
+Select jobs to execute...
+
+[Sat Dec  9 22:02:29 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 14
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+		
+		
+[Sat Dec  9 22:02:29 2023]
+Error in rule endCutGstar_sh:
+    jobid: 14
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+		
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 14.
+Select jobs to execute...
+
+[Sat Dec  9 22:02:29 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 14
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+		
+		
+[Sat Dec  9 22:02:29 2023]
+Error in rule endCutGstar_sh:
+    jobid: 14
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.1.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.1.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.1.shuffled.pred.sites.bed
+		
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Select jobs to execute...
+
+[Sat Dec  9 22:02:29 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+    jobid: 15
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    wildcards: miRShuffled=anno.mir.tas.0.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+		
+		
+[Sat Dec  9 22:02:29 2023]
+Error in rule endCutGstar_sh:
+    jobid: 15
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+		
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 15.
+Select jobs to execute...
+
+[Sat Dec  9 22:02:29 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+    jobid: 15
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    wildcards: miRShuffled=anno.mir.tas.0.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+		
+		
+[Sat Dec  9 22:02:29 2023]
+Error in rule endCutGstar_sh:
+    jobid: 15
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+		
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 15.
+Select jobs to execute...
+
+[Sat Dec  9 22:02:29 2023]
+rule endCutGstar_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+    jobid: 15
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    wildcards: miRShuffled=anno.mir.tas.0.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+		
+		
+[Sat Dec  9 22:02:29 2023]
+Error in rule endCutGstar_sh:
+    jobid: 15
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+    shell:
+        
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		#run GSTAr
+		perl $GSTAr_prog -t -a /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirGSTArNew/anno.mir.tas.0.shuffled.fa /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.GSTAr
+
+		rm -r /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled
+
+		awk 'NR > 8' /share/quonlab/workspaces/tmathieu/meyersData/GSTArSnakemake/anno.mir.tas.0.shuffled.GSTAr | awk -v OFS='	' '{if ($9 <= 6.0) print $2,$5-1,$5,$1,$9}' | sort -k1,1 -k2,2n | awk -v OFS='	' '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked/anno.mir.tas.0.shuffled.pred.sites.bed
+		
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-09T220227.118768.snakemake.log

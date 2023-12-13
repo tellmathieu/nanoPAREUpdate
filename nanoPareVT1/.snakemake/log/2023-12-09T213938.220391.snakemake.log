@@ -1,0 +1,70 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_collapse            1
+Gstar_endtime             1
+all                       1
+endClass_sh               1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+endGraph_sh               1
+endMap_sh                 1
+endMask_sh                1
+total                    12
+
+Select jobs to execute...
+
+[Sat Dec  9 21:39:40 2023]
+rule endMap_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    jobid: 12
+    reason: Code has changed since last execution; Params have changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+			st=`date +%s`
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --icomp 0
+				let line++
+			done
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////ENDMAP_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+		
+Terminating processes on user request, this might take some time.
+[Sat Dec  9 21:44:12 2023]
+Error in rule endMap_sh:
+    jobid: 12
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+    shell:
+        
+			st=`date +%s`
+			total_lines=$(cat /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table | wc -l)
+			line=1
+			while [ $line -le $total_lines ]
+			do 
+				bash /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /share/quonlab/workspaces/tmathieu/meyersData/reference1smg.table -G /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 30 --cpus 48 --icomp 0
+				let line++
+			done
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////ENDMAP_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+			echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endMapDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-12-09T213938.220391.snakemake.log

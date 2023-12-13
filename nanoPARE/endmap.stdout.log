@@ -1,0 +1,948 @@
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=30
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=1
+  ICOMP=0
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Parsed reference table:
+Line number: 1
+FASTQ directory: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+FASTQ file name: test.1.5P.fq.gz
+Sample name: test1
+Sample type: test
+Library type: 5P
+Read type: SE
+Adapter sequence(s): nextera
+### PHASE 1: STAGE-SPECIFIC FASTQ FILE ASSEMBLY AND ADAPTER TRIMMING ###
+Unzipping fastq file test.1.5P.fq.gz to the sample temp directory
+ 
+############################
+Finished parsing FASTQ files
+Experiment type: SE
+Mate 1 reads: 172769
+Mate 2 reads: 0
+############################
+ 
+Trimming transposase adapters with cutadapt:
+Adapters: CTGTCTCTTATACACATCTGACGCTGCCGACGA CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+cutadapt -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -o test1_trim1.fastq --untrimmed-output test1_untrimmed1.fastq test1.1.fastq
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -o test1_trim1.fastq --untrimmed-output test1_untrimmed1.fastq test1.1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.059 s (6.129 탎/read; 9.79 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 172,769
+Reads with adapters:                     1,094 (0.6%)
+
+== Read fate breakdown ==
+Reads discarded as untrimmed:          171,675 (99.4%)
+Reads written (passing filters):         1,094 (0.6%)
+
+Total basepairs processed:     5,285,732 bp
+Total written (filtered):         28,347 bp (0.5%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTGACGCTGCCGACGA; Type: regular 3'; Length: 33; Trimmed: 1094 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 25.0%
+  C: 8.0%
+  G: 23.4%
+  T: 43.6%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	893	2699.5	0	893
+4	79	674.9	0	79
+5	73	168.7	0	73
+6	29	42.2	0	29
+7	9	10.5	0	9
+8	1	2.6	0	1
+9	1	0.7	0	0 1
+10	6	0.2	1	0 6
+11	3	0.0	1	0 3
+cutadapt -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test1_trim2.fastq test1_untrimmed1.fastq
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test1_trim2.fastq test1_untrimmed1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.104 s (6.430 탎/read; 9.33 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 171,675
+Reads with adapters:                         0 (0.0%)
+Reads written (passing filters):       171,675 (100.0%)
+
+Total basepairs processed:     5,253,678 bp
+Total written (filtered):      5,253,678 bp (100.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 0 times
+Removing trim intermediates
+Adapter trimming complete.
+### PHASE 2: MAPPING READS TO THE GENOME WITH STAR ###
+STAR --runMode alignReads \
+--alignIntronMax 10000 \
+--alignMatesGapMax 11000 \
+--alignSJDBoverhangMin 1 \
+--alignSJoverhangMin 10 \
+--outSJfilterOverhangMin -1 15 15 15 \
+--outSJfilterCountTotalMin -1 2 2 2 \
+--outSJfilterCountUniqueMin -1 2 2 2 \
+--outFilterType BySJout \
+--outFilterMismatchNmax 2 \
+--outFilterMismatchNoverLmax .05 \
+--twopassMode Basic \
+--genomeDir $genome_index_dir \
+--limitBAMsortRAM "$RAM"000000000 \
+--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+--outReadsUnmapped Fastx \
+--outFilterMultimapNmax 100 \
+--outSAMmultNmax 100 \
+--outSAMattributes NH HI AS nM NM MD jM jI XS \
+--outSAMprimaryFlag AllBestScore \
+--outSAMtype BAM Unsorted \
+--outTmpDir $temp_dir_s \
+--quantMode GeneCounts \
+--runRNGseed 12345 \
+--runThreadN $CPUS \
+--sjdbGTFfile $ANNOTATION_GFF         --alignEndsType Local         --outFilterMatchNminOverLread 0.9         --readFilesIn /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test1.5P/test1_cleaned.1.fastq         --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test1.5P/star/ >& test1.star.log
+Generating bedgraph files...
+Loading genome FASTA file...
+Loading chromosome lengths from header: test1.sam
+Constructing coverage dictionaries...
+
+Assigning 3592 multimappers: 5P
+	Rescued 95.7% of multimappers.
+All reads assigned. Writing files...
+	5P +
+	5P -
+Coverage calculations complete!
+Moving final files to results folder...
+Pipeline complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=30
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=2
+  ICOMP=0
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Parsed reference table:
+Line number: 2
+FASTQ directory: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+FASTQ file name: test.2.BODY.fq.gz
+Sample name: test2
+Sample type: test
+Library type: BODY
+Read type: SE
+Adapter sequence(s): nextera
+### PHASE 1: STAGE-SPECIFIC FASTQ FILE ASSEMBLY AND ADAPTER TRIMMING ###
+Unzipping fastq file test.2.BODY.fq.gz to the sample temp directory
+ 
+############################
+Finished parsing FASTQ files
+Experiment type: SE
+Mate 1 reads: 246960
+Mate 2 reads: 0
+############################
+ 
+Trimming transposase adapters with cutadapt:
+Adapters: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
+tn5.1: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG (reverse complement CTGTCTCTTATACACATCTGACGCTGCCGACGA)
+tn5.2: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG (reverse complement CTGTCTCTTATACACATCTCCGAGCCCACGAGAC)
+cutadapt -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test2_adaptertrim.1.fastq test2.1.fastq #rc(Tn5.2)
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test2_adaptertrim.1.fastq test2.1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.586 s (6.423 탎/read; 9.34 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 246,960
+Reads with adapters:                     1,352 (0.5%)
+Reads written (passing filters):       246,960 (100.0%)
+
+Total basepairs processed:    11,457,446 bp
+Total written (filtered):     11,452,936 bp (100.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 1352 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 27.3%
+  C: 8.4%
+  G: 44.2%
+  T: 20.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	1101	3858.8	0	1101
+4	130	964.7	0	130
+5	79	241.2	0	79
+6	25	60.3	0	25
+7	9	15.1	0	9
+9	3	0.9	0	0 3
+10	3	0.2	1	0 3
+11	2	0.1	1	0 2
+Cleaning reads with fastq_drop_short_reads.py
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/fastq_drop_short_reads.py -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test2.BODY/test2_cleaned.1.fastq --minlen 16 /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test2.BODY/test2_adaptertrim.1.fastq
+Adapter trimming complete.
+### PHASE 2: MAPPING READS TO THE GENOME WITH STAR ###
+STAR --runMode alignReads \
+--alignIntronMax 10000 \
+--alignMatesGapMax 11000 \
+--alignSJDBoverhangMin 1 \
+--alignSJoverhangMin 10 \
+--outSJfilterOverhangMin -1 15 15 15 \
+--outSJfilterCountTotalMin -1 2 2 2 \
+--outSJfilterCountUniqueMin -1 2 2 2 \
+--outFilterType BySJout \
+--outFilterMismatchNmax 2 \
+--outFilterMismatchNoverLmax .05 \
+--twopassMode Basic \
+--genomeDir $genome_index_dir \
+--limitBAMsortRAM "$RAM"000000000 \
+--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+--outReadsUnmapped Fastx \
+--outFilterMultimapNmax 100 \
+--outSAMmultNmax 100 \
+--outSAMattributes NH HI AS nM NM MD jM jI XS \
+--outSAMprimaryFlag AllBestScore \
+--outSAMtype BAM Unsorted \
+--outTmpDir $temp_dir_s \
+--quantMode GeneCounts \
+--runRNGseed 12345 \
+--runThreadN $CPUS \
+--sjdbGTFfile $ANNOTATION_GFF         --alignEndsType EndToEnd         --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test2.BODY/star/         --readFilesIn /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test2.BODY/test2_cleaned.1.fastq >& test2.star.log
+Generating bedgraph files...
+Loading genome FASTA file...
+Loading chromosome lengths from header: test2.sam
+Constructing coverage dictionaries...
+
+Assigning 5578 multimappers: BODY
+	Rescued 99.9% of multimappers.
+All reads assigned. Writing files...
+	BODY +
+	BODY -
+Coverage calculations complete!
+Moving final files to results folder...
+Pipeline complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=30
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=3
+  ICOMP=0
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Parsed reference table:
+Line number: 3
+FASTQ directory: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+FASTQ file name: test.3.BODY.fq.gz
+Sample name: test3
+Sample type: test
+Library type: BODY
+Read type: SE
+Adapter sequence(s): nextera
+### PHASE 1: STAGE-SPECIFIC FASTQ FILE ASSEMBLY AND ADAPTER TRIMMING ###
+Unzipping fastq file test.3.BODY.fq.gz to the sample temp directory
+ 
+############################
+Finished parsing FASTQ files
+Experiment type: SE
+Mate 1 reads: 284140
+Mate 2 reads: 0
+############################
+ 
+Trimming transposase adapters with cutadapt:
+Adapters: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
+tn5.1: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG (reverse complement CTGTCTCTTATACACATCTGACGCTGCCGACGA)
+tn5.2: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG (reverse complement CTGTCTCTTATACACATCTCCGAGCCCACGAGAC)
+cutadapt -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test3_adaptertrim.1.fastq test3.1.fastq #rc(Tn5.2)
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test3_adaptertrim.1.fastq test3.1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.816 s (6.390 탎/read; 9.39 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 284,140
+Reads with adapters:                       201 (0.1%)
+Reads written (passing filters):       284,140 (100.0%)
+
+Total basepairs processed:    14,098,443 bp
+Total written (filtered):     14,097,772 bp (100.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 201 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 23.9%
+  C: 9.0%
+  G: 40.3%
+  T: 26.9%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	174	4439.7	0	174
+4	8	1109.9	0	8
+5	9	277.5	0	9
+6	6	69.4	0	6
+7	2	17.3	0	2
+11	2	0.1	1	0 2
+Cleaning reads with fastq_drop_short_reads.py
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/fastq_drop_short_reads.py -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test3.BODY/test3_cleaned.1.fastq --minlen 16 /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test3.BODY/test3_adaptertrim.1.fastq
+Adapter trimming complete.
+### PHASE 2: MAPPING READS TO THE GENOME WITH STAR ###
+STAR --runMode alignReads \
+--alignIntronMax 10000 \
+--alignMatesGapMax 11000 \
+--alignSJDBoverhangMin 1 \
+--alignSJoverhangMin 10 \
+--outSJfilterOverhangMin -1 15 15 15 \
+--outSJfilterCountTotalMin -1 2 2 2 \
+--outSJfilterCountUniqueMin -1 2 2 2 \
+--outFilterType BySJout \
+--outFilterMismatchNmax 2 \
+--outFilterMismatchNoverLmax .05 \
+--twopassMode Basic \
+--genomeDir $genome_index_dir \
+--limitBAMsortRAM "$RAM"000000000 \
+--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+--outReadsUnmapped Fastx \
+--outFilterMultimapNmax 100 \
+--outSAMmultNmax 100 \
+--outSAMattributes NH HI AS nM NM MD jM jI XS \
+--outSAMprimaryFlag AllBestScore \
+--outSAMtype BAM Unsorted \
+--outTmpDir $temp_dir_s \
+--quantMode GeneCounts \
+--runRNGseed 12345 \
+--runThreadN $CPUS \
+--sjdbGTFfile $ANNOTATION_GFF         --alignEndsType EndToEnd         --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test3.BODY/star/         --readFilesIn /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test3.BODY/test3_cleaned.1.fastq >& test3.star.log
+Generating bedgraph files...
+Loading genome FASTA file...
+Loading chromosome lengths from header: test3.sam
+Constructing coverage dictionaries...
+
+Assigning 6018 multimappers: BODY
+	Rescued 99.8% of multimappers.
+All reads assigned. Writing files...
+	BODY +
+	BODY -
+Coverage calculations complete!
+Moving final files to results folder...
+Pipeline complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=30
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=4
+  ICOMP=0
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Parsed reference table:
+Line number: 4
+FASTQ directory: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+FASTQ file name: test.3.5P.fq.gz
+Sample name: test3
+Sample type: test
+Library type: 5P
+Read type: SE
+Adapter sequence(s): nextera
+### PHASE 1: STAGE-SPECIFIC FASTQ FILE ASSEMBLY AND ADAPTER TRIMMING ###
+Unzipping fastq file test.3.5P.fq.gz to the sample temp directory
+ 
+############################
+Finished parsing FASTQ files
+Experiment type: SE
+Mate 1 reads: 250346
+Mate 2 reads: 0
+############################
+ 
+Trimming transposase adapters with cutadapt:
+Adapters: CTGTCTCTTATACACATCTGACGCTGCCGACGA CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+cutadapt -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -o test3_trim1.fastq --untrimmed-output test3_untrimmed1.fastq test3.1.fastq
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -o test3_trim1.fastq --untrimmed-output test3_untrimmed1.fastq test3.1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.595 s (6.372 탎/read; 9.42 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 250,346
+Reads with adapters:                       506 (0.2%)
+
+== Read fate breakdown ==
+Reads discarded as untrimmed:          249,840 (99.8%)
+Reads written (passing filters):           506 (0.2%)
+
+Total basepairs processed:    11,717,571 bp
+Total written (filtered):         16,240 bp (0.1%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTGACGCTGCCGACGA; Type: regular 3'; Length: 33; Trimmed: 506 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 26.7%
+  C: 16.2%
+  G: 22.3%
+  T: 34.8%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	357	3911.7	0	357
+4	103	977.9	0	103
+5	21	244.5	0	21
+6	15	61.1	0	15
+7	2	15.3	0	2
+8	1	3.8	0	1
+10	3	0.2	1	0 3
+11	2	0.1	1	0 2
+13	2	0.0	1	0 2
+cutadapt -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test3_trim2.fastq test3_untrimmed1.fastq
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test3_trim2.fastq test3_untrimmed1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.577 s (6.312 탎/read; 9.51 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 249,840
+Reads with adapters:                         0 (0.0%)
+Reads written (passing filters):       249,840 (100.0%)
+
+Total basepairs processed:    11,699,553 bp
+Total written (filtered):     11,699,553 bp (100.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 0 times
+Removing trim intermediates
+Adapter trimming complete.
+### PHASE 2: MAPPING READS TO THE GENOME WITH STAR ###
+STAR --runMode alignReads \
+--alignIntronMax 10000 \
+--alignMatesGapMax 11000 \
+--alignSJDBoverhangMin 1 \
+--alignSJoverhangMin 10 \
+--outSJfilterOverhangMin -1 15 15 15 \
+--outSJfilterCountTotalMin -1 2 2 2 \
+--outSJfilterCountUniqueMin -1 2 2 2 \
+--outFilterType BySJout \
+--outFilterMismatchNmax 2 \
+--outFilterMismatchNoverLmax .05 \
+--twopassMode Basic \
+--genomeDir $genome_index_dir \
+--limitBAMsortRAM "$RAM"000000000 \
+--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+--outReadsUnmapped Fastx \
+--outFilterMultimapNmax 100 \
+--outSAMmultNmax 100 \
+--outSAMattributes NH HI AS nM NM MD jM jI XS \
+--outSAMprimaryFlag AllBestScore \
+--outSAMtype BAM Unsorted \
+--outTmpDir $temp_dir_s \
+--quantMode GeneCounts \
+--runRNGseed 12345 \
+--runThreadN $CPUS \
+--sjdbGTFfile $ANNOTATION_GFF         --alignEndsType Local         --outFilterMatchNminOverLread 0.9         --readFilesIn /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test3.5P/test3_cleaned.1.fastq         --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test3.5P/star/ >& test3.star.log
+Generating bedgraph files...
+Loading genome FASTA file...
+Loading chromosome lengths from header: test3.sam
+Constructing coverage dictionaries...
+
+Assigning 3448 multimappers: 5P
+	Rescued 97.5% of multimappers.
+All reads assigned. Writing files...
+	5P +
+	5P -
+Coverage calculations complete!
+Moving final files to results folder...
+Pipeline complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=30
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=5
+  ICOMP=0
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Parsed reference table:
+Line number: 5
+FASTQ directory: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+FASTQ file name: test.1.BODY.fq.gz
+Sample name: test1
+Sample type: test
+Library type: BODY
+Read type: SE
+Adapter sequence(s): nextera
+### PHASE 1: STAGE-SPECIFIC FASTQ FILE ASSEMBLY AND ADAPTER TRIMMING ###
+Unzipping fastq file test.1.BODY.fq.gz to the sample temp directory
+ 
+############################
+Finished parsing FASTQ files
+Experiment type: SE
+Mate 1 reads: 326438
+Mate 2 reads: 0
+############################
+ 
+Trimming transposase adapters with cutadapt:
+Adapters: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG
+tn5.1: TCGTCGGCAGCGTCAGATGTGTATAAGAGACAG (reverse complement CTGTCTCTTATACACATCTGACGCTGCCGACGA)
+tn5.2: GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAG (reverse complement CTGTCTCTTATACACATCTCCGAGCCCACGAGAC)
+cutadapt -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test1_adaptertrim.1.fastq test1.1.fastq #rc(Tn5.2)
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test1_adaptertrim.1.fastq test1.1.fastq
+Processing single-end reads on 1 core ...
+Finished in 2.300 s (7.045 탎/read; 8.52 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 326,438
+Reads with adapters:                       539 (0.2%)
+Reads written (passing filters):       326,438 (100.0%)
+
+Total basepairs processed:    16,035,905 bp
+Total written (filtered):     16,034,143 bp (100.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 539 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-34 bp: 3
+
+Bases preceding removed adapters:
+  A: 26.5%
+  C: 7.8%
+  G: 44.3%
+  T: 21.3%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	458	5100.6	0	458
+4	44	1275.1	0	44
+5	23	318.8	0	23
+6	8	79.7	0	8
+7	3	19.9	0	3
+9	2	1.2	0	0 2
+10	1	0.3	1	0 1
+Cleaning reads with fastq_drop_short_reads.py
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/fastq_drop_short_reads.py -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test1.BODY/test1_cleaned.1.fastq --minlen 16 /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test1.BODY/test1_adaptertrim.1.fastq
+Adapter trimming complete.
+### PHASE 2: MAPPING READS TO THE GENOME WITH STAR ###
+STAR --runMode alignReads \
+--alignIntronMax 10000 \
+--alignMatesGapMax 11000 \
+--alignSJDBoverhangMin 1 \
+--alignSJoverhangMin 10 \
+--outSJfilterOverhangMin -1 15 15 15 \
+--outSJfilterCountTotalMin -1 2 2 2 \
+--outSJfilterCountUniqueMin -1 2 2 2 \
+--outFilterType BySJout \
+--outFilterMismatchNmax 2 \
+--outFilterMismatchNoverLmax .05 \
+--twopassMode Basic \
+--genomeDir $genome_index_dir \
+--limitBAMsortRAM "$RAM"000000000 \
+--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+--outReadsUnmapped Fastx \
+--outFilterMultimapNmax 100 \
+--outSAMmultNmax 100 \
+--outSAMattributes NH HI AS nM NM MD jM jI XS \
+--outSAMprimaryFlag AllBestScore \
+--outSAMtype BAM Unsorted \
+--outTmpDir $temp_dir_s \
+--quantMode GeneCounts \
+--runRNGseed 12345 \
+--runThreadN $CPUS \
+--sjdbGTFfile $ANNOTATION_GFF         --alignEndsType EndToEnd         --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test1.BODY/star/         --readFilesIn /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test1.BODY/test1_cleaned.1.fastq >& test1.star.log
+Generating bedgraph files...
+Loading genome FASTA file...
+Loading chromosome lengths from header: test1.sam
+Constructing coverage dictionaries...
+
+Assigning 6938 multimappers: BODY
+	Rescued 99.6% of multimappers.
+All reads assigned. Writing files...
+	BODY +
+	BODY -
+Coverage calculations complete!
+Moving final files to results folder...
+Pipeline complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=30
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=6
+  ICOMP=0
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Parsed reference table:
+Line number: 6
+FASTQ directory: /share/quonlab/workspaces/tmathieu/meyersData/FASTQ
+FASTQ file name: test.2.5P.fq.gz
+Sample name: test2
+Sample type: test
+Library type: 5P
+Read type: SE
+Adapter sequence(s): nextera
+### PHASE 1: STAGE-SPECIFIC FASTQ FILE ASSEMBLY AND ADAPTER TRIMMING ###
+Unzipping fastq file test.2.5P.fq.gz to the sample temp directory
+ 
+############################
+Finished parsing FASTQ files
+Experiment type: SE
+Mate 1 reads: 252822
+Mate 2 reads: 0
+############################
+ 
+Trimming transposase adapters with cutadapt:
+Adapters: CTGTCTCTTATACACATCTGACGCTGCCGACGA CTGTCTCTTATACACATCTCCGAGCCCACGAGAC
+cutadapt -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -o test2_trim1.fastq --untrimmed-output test2_untrimmed1.fastq test2.1.fastq
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTGACGCTGCCGACGA -o test2_trim1.fastq --untrimmed-output test2_untrimmed1.fastq test2.1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.567 s (6.199 탎/read; 9.68 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 252,822
+Reads with adapters:                     1,314 (0.5%)
+
+== Read fate breakdown ==
+Reads discarded as untrimmed:          251,508 (99.5%)
+Reads written (passing filters):         1,314 (0.5%)
+
+Total basepairs processed:     9,549,180 bp
+Total written (filtered):         36,678 bp (0.4%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTGACGCTGCCGACGA; Type: regular 3'; Length: 33; Trimmed: 1314 times
+
+Minimum overlap: 3
+No. of allowed errors:
+1-9 bp: 0; 10-19 bp: 1; 20-29 bp: 2; 30-33 bp: 3
+
+Bases preceding removed adapters:
+  A: 25.3%
+  C: 8.3%
+  G: 23.3%
+  T: 43.2%
+  none/other: 0.0%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+3	1007	3950.3	0	1007
+4	130	987.6	0	130
+5	86	246.9	0	86
+6	53	61.7	0	53
+7	14	15.4	0	14
+8	1	3.9	0	1
+10	5	0.2	1	0 5
+11	7	0.1	1	0 7
+13	11	0.0	1	0 11
+cutadapt -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test2_trim2.fastq test2_untrimmed1.fastq
+This is cutadapt 4.5 with Python 3.10.13
+Command line parameters: -a CTGTCTCTTATACACATCTCCGAGCCCACGAGAC -o test2_trim2.fastq test2_untrimmed1.fastq
+Processing single-end reads on 1 core ...
+Finished in 1.587 s (6.309 탎/read; 9.51 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                 251,508
+Reads with adapters:                         0 (0.0%)
+Reads written (passing filters):       251,508 (100.0%)
+
+Total basepairs processed:     9,507,837 bp
+Total written (filtered):      9,507,837 bp (100.0%)
+
+=== Adapter 1 ===
+
+Sequence: CTGTCTCTTATACACATCTCCGAGCCCACGAGAC; Type: regular 3'; Length: 34; Trimmed: 0 times
+Removing trim intermediates
+Adapter trimming complete.
+### PHASE 2: MAPPING READS TO THE GENOME WITH STAR ###
+STAR --runMode alignReads \
+--alignIntronMax 10000 \
+--alignMatesGapMax 11000 \
+--alignSJDBoverhangMin 1 \
+--alignSJoverhangMin 10 \
+--outSJfilterOverhangMin -1 15 15 15 \
+--outSJfilterCountTotalMin -1 2 2 2 \
+--outSJfilterCountUniqueMin -1 2 2 2 \
+--outFilterType BySJout \
+--outFilterMismatchNmax 2 \
+--outFilterMismatchNoverLmax .05 \
+--twopassMode Basic \
+--genomeDir $genome_index_dir \
+--limitBAMsortRAM "$RAM"000000000 \
+--outFilterIntronMotifs RemoveNoncanonicalUnannotated \
+--outReadsUnmapped Fastx \
+--outFilterMultimapNmax 100 \
+--outSAMmultNmax 100 \
+--outSAMattributes NH HI AS nM NM MD jM jI XS \
+--outSAMprimaryFlag AllBestScore \
+--outSAMtype BAM Unsorted \
+--outTmpDir $temp_dir_s \
+--quantMode GeneCounts \
+--runRNGseed 12345 \
+--runThreadN $CPUS \
+--sjdbGTFfile $ANNOTATION_GFF         --alignEndsType Local         --outFilterMatchNminOverLread 0.9         --readFilesIn /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test2.5P/test2_cleaned.1.fastq         --outFileNamePrefix /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/test2.5P/star/ >& test2.star.log
+Generating bedgraph files...
+Loading genome FASTA file...
+Loading chromosome lengths from header: test2.sam
+Constructing coverage dictionaries...
+
+Assigning 4169 multimappers: 5P
+	Rescued 95.7% of multimappers.
+All reads assigned. Writing files...
+	5P +
+	5P -
+Coverage calculations complete!
+Moving final files to results folder...
+Pipeline complete!

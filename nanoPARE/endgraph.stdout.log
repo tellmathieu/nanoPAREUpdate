@@ -1,0 +1,219 @@
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=-1
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=test1
+  RPM=0.5
+  KERNEL=laplace
+  BANDWIDTH=15
+  FRAGLEN=200
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+#########################################
+### STEP 1: BEDGRAPH ARTIFACT MASKING ###
+#########################################
+ 
+Upstream mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/5P_mask_up.bed
+Upstream mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/5P_mask_up.bed
+Step 1 complete.
+####################################################################
+### STEP 2: PARAMETER ESTIMATION WITH SUBTRACTIVE BEDGRAPH FILES ###
+####################################################################
+ 
+2
+3
+4
+Gene-mapping 5P reads:   143286
+Gene-mapping BODY reads: 169944
+Scaling factor: 0.3923
+ 
+#########################################################
+### STEP 3: CONTINUOUS KERNEL DENSITY DISTRIBUTION ###
+#########################################################
+ 
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_kernel_density.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_subtract.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_smooth.bedgraph -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -K laplace -H 15 -S 3 -D 3 -P -c 48
+Fitting kernel to chromosome Ath_chr2.
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_thresh_to_bed.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_smooth.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.plus_features.bed -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -T 0 -M 10 -V sum -S plus
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_kernel_density.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_subtract.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_smooth.bedgraph -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -K laplace -H 15 -S 3 -D 3 -P -c 48
+Fitting kernel to chromosome Ath_chr2.
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_thresh_to_bed.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_smooth.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/5P.minus_features.bed -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -T 0 -M 10 -V sum -S minus
+Step 3 complete.
+EndGraph complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=-1
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=test2
+  RPM=0.5
+  KERNEL=laplace
+  BANDWIDTH=15
+  FRAGLEN=200
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+#########################################
+### STEP 1: BEDGRAPH ARTIFACT MASKING ###
+#########################################
+ 
+Upstream mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/5P_mask_up.bed
+Upstream mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/5P_mask_up.bed
+Step 1 complete.
+####################################################################
+### STEP 2: PARAMETER ESTIMATION WITH SUBTRACTIVE BEDGRAPH FILES ###
+####################################################################
+ 
+2
+3
+4
+Gene-mapping 5P reads:   222016
+Gene-mapping BODY reads: 148990
+Scaling factor: 0.2099
+ 
+#########################################################
+### STEP 3: CONTINUOUS KERNEL DENSITY DISTRIBUTION ###
+#########################################################
+ 
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_kernel_density.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_subtract.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_smooth.bedgraph -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -K laplace -H 15 -S 3 -D 3 -P -c 48
+Fitting kernel to chromosome Ath_chr2.
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_thresh_to_bed.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_smooth.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.plus_features.bed -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -T 0 -M 10 -V sum -S plus
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_kernel_density.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_subtract.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_smooth.bedgraph -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -K laplace -H 15 -S 3 -D 3 -P -c 48
+Fitting kernel to chromosome Ath_chr2.
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_thresh_to_bed.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_smooth.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/5P.minus_features.bed -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -T 0 -M 10 -V sum -S minus
+Step 3 complete.
+EndGraph complete!
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=-1
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=test3
+  RPM=0.5
+  KERNEL=laplace
+  BANDWIDTH=15
+  FRAGLEN=200
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+#########################################
+### STEP 1: BEDGRAPH ARTIFACT MASKING ###
+#########################################
+ 
+Upstream mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/5P_mask_up.bed
+Upstream mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/5P_mask_up.bed
+Step 1 complete.
+####################################################################
+### STEP 2: PARAMETER ESTIMATION WITH SUBTRACTIVE BEDGRAPH FILES ###
+####################################################################
+ 
+2
+3
+4
+Gene-mapping 5P reads:   226751
+Gene-mapping BODY reads: 146812
+Scaling factor: 0.2117
+ 
+#########################################################
+### STEP 3: CONTINUOUS KERNEL DENSITY DISTRIBUTION ###
+#########################################################
+ 
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_kernel_density.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_subtract.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_smooth.bedgraph -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -K laplace -H 15 -S 3 -D 3 -P -c 48
+Fitting kernel to chromosome Ath_chr2.
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_thresh_to_bed.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_smooth.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.plus_features.bed -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -T 0 -M 10 -V sum -S plus
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_kernel_density.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_subtract.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_smooth.bedgraph -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -K laplace -H 15 -S 3 -D 3 -P -c 48
+Fitting kernel to chromosome Ath_chr2.
+python /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bedgraph_thresh_to_bed.py --single_stream -B /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_smooth.bedgraph -O /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/5P.minus_features.bed -L /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/length.table -T 0 -M 10 -V sum -S minus
+Step 3 complete.
+EndGraph complete!

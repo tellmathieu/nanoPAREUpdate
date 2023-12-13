@@ -1,0 +1,115 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Gstar_endtime             1
+all                       1
+endCutNormalize_sh        1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                     6
+
+Select jobs to execute...
+
+[Sun Dec 10 13:20:59 2023]
+rule Gstar_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    jobid: 5
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+[Sun Dec 10 13:20:59 2023]
+Error in rule Gstar_endtime:
+    jobid: 5
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    shell:
+        
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 5.
+Select jobs to execute...
+
+[Sun Dec 10 13:20:59 2023]
+rule Gstar_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    jobid: 5
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+[Sun Dec 10 13:20:59 2023]
+Error in rule Gstar_endtime:
+    jobid: 5
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    shell:
+        
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 5.
+Select jobs to execute...
+
+[Sun Dec 10 13:20:59 2023]
+rule Gstar_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    jobid: 5
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt; Updated input files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+[Sun Dec 10 13:20:59 2023]
+Error in rule Gstar_endtime:
+    jobid: 5
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+    shell:
+        
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimegstar.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutGstarDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-10T132056.969101.snakemake.log

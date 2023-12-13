@@ -1,0 +1,162 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+Sparta_collapse         1
+Sparta_endtime          1
+all                     1
+endCutShuffle_sh        1
+total                   4
+
+Select jobs to execute...
+
+[Mon Dec 11 23:58:10 2023]
+checkpoint endCutShuffle_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+    jobid: 3
+    reason: Code has changed since last execution
+    threads: 48
+    resources: tmpdir=/tmp
+DAG of jobs will be updated after completion.
+
+
+		st=`date +%s`
+		mkdir -p /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa 2 /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1
+		
+		#removing integers from file names
+		rename 's/0/zero_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/1/one_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/2/two_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/3/three_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/4/four_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/5/five_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/6/six_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/7/seven_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/8/eight_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+		rename 's/9/nine_/' /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/*.shuffled.fa
+
+		et=`date +%s`
+		rt=$et-$st
+		echo "//////////ENDCUT_SHUFFLE_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt
+		
+[Mon Dec 11 23:58:11 2023]
+Finished job 3.
+1 of 4 steps (25%) done
+Select jobs to execute...
+
+[Mon Dec 11 23:58:11 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#removing integers from file names
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --map2DD
+
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 236:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+Trying to restart job 6.
+Select jobs to execute...
+
+[Mon Dec 11 23:58:23 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#removing integers from file names
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --map2DD
+
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 236:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+Trying to restart job 6.
+Select jobs to execute...
+
+[Mon Dec 11 23:58:35 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    jobid: 6
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.1.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#removing integers from file names
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.1.shuffled.fa -tarPred H -tarScore S --map2DD
+
+		
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule endCutSparta_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 236:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+/share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.1.shuffled.pred.sites.bed
+Select jobs to execute...
+
+[Mon Dec 11 23:58:47 2023]
+rule endCutSparta_sh:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.pred.sites.bed
+    jobid: 8
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.zero_.shuffled
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+		#removing integers from file names
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa -tarPred H -tarScore S --map2DD
+
+		
+Terminating processes on user request, this might take some time.
+[Mon Dec 11 23:58:51 2023]
+Error in rule endCutSparta_sh:
+    jobid: 8
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutShuffleDone.txt, /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa
+    output: /share/quonlab/workspaces/tmathieu/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.zero_.shuffled.pred.sites.bed
+    shell:
+        
+		#removing integers from file names
+
+
+		#execution of miRferno from the sPARTA program
+		python3 /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /share/quonlab/workspaces/tmathieu/meyersData/shuffleDirSparta_1/anno.mir.tas.zero_.shuffled.fa -tarPred H -tarScore S --map2DD
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2023-12-11T235808.723048.snakemake.log

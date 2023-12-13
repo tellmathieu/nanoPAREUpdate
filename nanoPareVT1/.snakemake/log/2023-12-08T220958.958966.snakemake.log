@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in rule Gstar_endtime in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 255:
+Wildcards in input files cannot be determined from output files:
+'miRShuffled'

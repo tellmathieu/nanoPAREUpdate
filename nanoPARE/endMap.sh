@@ -365,7 +365,7 @@ else
         CMDline="python $python_dir/fastq_drop_short_reads.py -O $sample_dir/"$sample_name"_cleaned.1.fastq --minlen $minimum_readlength $sample_dir/"$sample_name"_adaptertrim.1.fastq"
         echo $CMDline
         eval $CMDline
-        rm "$sample_name"_adaptertrim.1.fastq "$sample_name"_adaptertrim.2.fastq "$sample_name".1.fastq "$sample_name".2.fastq
+        rm "$sample_name"_adaptertrim.1.fastq "$sample_name".1.fastq
     fi
     echo "Adapter trimming complete."
 fi

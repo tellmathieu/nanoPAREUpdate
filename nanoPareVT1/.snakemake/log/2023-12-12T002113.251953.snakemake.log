@@ -1,0 +1,127 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 48
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+Sparta_collapse        1
+Sparta_endtime         1
+all                    1
+total                  3
+
+Select jobs to execute...
+
+[Tue Dec 12 00:21:14 2023]
+rule Sparta_collapse:
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    jobid: 2
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+		
+[Tue Dec 12 00:21:14 2023]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Tue Dec 12 00:21:14 2023]
+rule Sparta_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_SPARTA_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+		
+[Tue Dec 12 00:21:14 2023]
+Error in rule Sparta_endtime:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+    shell:
+        
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_SPARTA_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 1.
+Select jobs to execute...
+
+[Tue Dec 12 00:21:14 2023]
+rule Sparta_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_SPARTA_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+		
+[Tue Dec 12 00:21:14 2023]
+Error in rule Sparta_endtime:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+    shell:
+        
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_SPARTA_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Trying to restart job 1.
+Select jobs to execute...
+
+[Tue Dec 12 00:21:14 2023]
+rule Sparta_endtime:
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+    jobid: 1
+    reason: Missing output files: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt; Input files updated by another job: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    resources: tmpdir=/tmp
+
+
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_SPARTA_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+		
+[Tue Dec 12 00:21:14 2023]
+Error in rule Sparta_endtime:
+    jobid: 1
+    input: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaCollapseDone.txt
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+    shell:
+        
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_SPARTA_DONE ($rt s)" >> /share/quonlab/workspaces/tmathieu/meyersData/runtimesparta_1.log
+		echo 'nanoPARE_GSTAr complete!'
+		echo DONE > /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-12T002113.251953.snakemake.log

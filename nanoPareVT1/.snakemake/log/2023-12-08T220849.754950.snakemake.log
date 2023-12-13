@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule endCutNormalize_sh in file /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate.smk, line 272:
+Missing input files for rule endCutNormalize_sh:
+    output: /nanoPareVT1/endCutNormDone.txt
+    affected files:
+        /nanoPareVT1/endCutGstarDone.txt

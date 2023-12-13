@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+#command to run this in snakemake bash runEndCutGstarBash.sh {params.sRna} {params.numShuffledSets} {params.gstar} {params.dataShuffleDir} {params.gstar_prog} {params.transcriptomeFASTA} {params.dataDir}
+		
+
 sRna=$1
 numShuffledSets=$2
 gstarsh=$3
