@@ -2,7 +2,7 @@
 
 #set variables
 #export NAME1=fb1_1to1
-export outDir_s=transcript_bedgraph_capmasked
+#export outDir_s=transcript_bedgraph_capmasked
 #export outDir_a=W.transcript.capmasked
 
 #NOTE: don't run 20 and 50 WIN simultaneously

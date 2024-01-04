@@ -1,0 +1,16 @@
+!!!!! WARNING: Could not move Log.out file from /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log/Log.out into /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp/genome_index/Log.out. Will keep /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log/Log.out
+
+Traceback (most recent call last):
+  File "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 95, in <module>
+    for line in open(args.INFILE):
+FileNotFoundError: [Errno 2] No such file or directory: 'class.exons_by_transcript.gff'
+sed: can't read class.terminal_exons_by_transcript.gff: No such file or directory
+
+*****
+***** ERROR: Requested column 4, but database file - only has fields 1 - 0.
+rm: cannot remove 'class.terminal_exons_by_transcript.gff': No such file or directory
+rm: cannot remove 'class.exons_by_transcript.gff': No such file or directory
+ript.gff': No such file or directory
+rm: cannot remove 'class.exons_by_transcript.gff': No such file or directory
+ctory
+rm: cannot remove 'class.exons_by_transcript.gff': No such file or directory

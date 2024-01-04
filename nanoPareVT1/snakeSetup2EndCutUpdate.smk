@@ -217,6 +217,7 @@ rule Gstar_starttime:
 	shell:
 		'''
 		export st=`date +%s`
+		echo "//////////ENDCUT_GSTAR_START_TIME_DONE ($st s)" >> {params.runtime_log}
 		echo DONE > {output}
 		'''
 
@@ -291,8 +292,7 @@ rule Gstar_endtime:
 	shell:
 		'''
 		et=`date +%s`
-		rt=$((et-st))
-		echo "//////////ENDCUT_GSTAR_DONE ($rt s)" >> {params.runtime_log}
+		echo "//////////ENDCUT_GSTAR_END_TIME_DONE ($et s)" >> {params.runtime_log}
 		echo 'nanoPARE_GSTAr complete!'
 		echo DONE > {output}
 		'''

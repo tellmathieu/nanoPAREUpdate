@@ -1,6 +1,6 @@
 {
-	"Title" : "nanoPARE Pipeline Adapted with sPARTA",
-	"Description" : "Adapted version of nanoPARE Pipeline with sPARTA to make it quicker",
+	"Title" : "nanoPARE Pipeline Adapted with GSTAr",
+	"Description" : "Adapted version of nanoPARE Pipeline with GSTAr",
 
 	"fastaRef" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
 	"annotation" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff",

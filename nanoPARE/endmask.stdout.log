@@ -1,16 +1,2469 @@
 Config settings:
+Config settings:
+Config settings:
+Config settings:
 
 _____________________________
 SETTINGS
 -----------------------------
 Basic configuration:
-  root_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE
-  bash_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
-  python_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
-  resource_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
-  temp_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
-  log_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
-  results_dir=/home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+Config settings:
+Config settings:
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Config settings:
+ 
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+Config settings:
+ 
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Config settings:
+ 
+Config settings:
+ 
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Samples: test1 test2 test3
+Sample type: test
+Sample type: test
+Config settings:
+Samples: test1 test2 test3
+ 
+Determining dominant transcripts for test...
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Determining dominant transcripts for test...
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Config settings:
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+ 
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Config settings:
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+ 
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Config settings:
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Config settings:
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Making gene-level bed files...
+Capmasking: test1
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Making gene-level bed files...
+Capmasking: test1
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Making gene-level bed files...
+Capmasking: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Making gene-level bed files...
+Converting to transcripts: test1
+Capmasking: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Making gene-level bed files...
+Capmasking: test1
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Capmasking: test2
+Converting to transcripts: test1
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Capmasking: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Making gene-level bed files...
+Capmasking: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Converting to transcripts: test2
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Converting to transcripts: test2
+Converting to transcripts: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Capmasking: test2
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Config settings:
+Converting to transcripts: test2
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=
+  CPUS=48
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=test
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=test
+  MASK_SOURCE=
+_____________________________
+
+
+ 
+Samples: test1 test2 test3
+Sample type: test
+Determining dominant transcripts for test...
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+Capmasking: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Making gene-level bed files...
+Capmasking: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test1
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Converting to transcripts: test2
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Capmasking: test3
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Capmasking: test2
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Converting to transcripts: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Capmasking: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test3
+Making gene-level bed files...
+Capmasking: test1
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+Converting to transcripts: test1
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test2
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+EndMask complete! See results in results/EndMask/test
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test2
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+Capmasking: test3
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Converting to transcripts: test3
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+EndMask complete! See results in results/EndMask/test
+# 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+# Converting genome BEDGRAPH to transcript coordinates.
+EndMask complete! See results in results/EndMask/test
+Config settings:
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE
+  bash_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/log
+  results_dir=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results
 
 General settings:
   GENOME_FASTA=/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta
@@ -48,17 +2501,17 @@ Determining dominant transcripts for test...
 # Converting genome BEDGRAPH to transcript coordinates.
 Making gene-level bed files...
 Capmasking: test1
-Internal mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
 Converting to transcripts: test1
 # 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
 # Converting genome BEDGRAPH to transcript coordinates.
 Capmasking: test2
-Internal mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
 Converting to transcripts: test2
 # 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
 # Converting genome BEDGRAPH to transcript coordinates.
 Capmasking: test3
-Internal mask: /home/tmathieu/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
+Internal mask: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/results/EndClass/test/test.capped.bed
 Converting to transcripts: test3
 # 379 reference transcripts: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff
 # Converting genome BEDGRAPH to transcript coordinates.

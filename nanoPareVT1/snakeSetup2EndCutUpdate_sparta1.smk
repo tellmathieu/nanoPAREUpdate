@@ -13,7 +13,7 @@ threads = int(config["threads"])
 
 rule all:
 	input:
-		os.path.join(config["programDir"], config["mainDir"], "endCutSpartaDone.txt"),
+		os.path.join(config["programDir"], config["mainDir"], "endCutStep2SpartaDone.txt"),
 
 
 rule setup_sh:
