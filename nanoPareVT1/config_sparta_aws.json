@@ -2,8 +2,8 @@
 	"Title" : "nanoPARE Pipeline Adapted with sPARTA",
 	"Description" : "Adapted version of nanoPARE Pipeline with sPARTA to make it quicker",
 
-	"fastaRef" : "/share13/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
-	"annotation" : "/share13/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
+	"fastaRef" : "/sharet/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
+	"annotation" : "/sharet/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
 
 	"AnnoTypeComment" : "Type of the Annotation File above, either GFF or GTF",
 		"annotationType" : "GFF",
@@ -11,26 +11,26 @@
 	"genomeFeatureComment" : "0 for genic regions, or 1 for intergenic regions",
 		"genomeFeature" : "0",
 
-	"refTable" : "/share13/meyersData/reference_sparta1.table",
+	"refTable" : "/sharet/meyersData/reference_sparta1.table",
 		"seq_run_SE_or_PE" : "SE",
 		"adapter_seq" : "nextera",
-	"fastqDir" : "/share13/meyersData/FASTQsparta1",
-	"runtime_log" : "/share13/meyersData/runtimesparta_1.log",
+	"fastqDir" : "/sharet/meyersData/FASTQsparta1",
+	"runtime_log" : "/sharet/meyersData/runtimesparta_1.log",
 	
 
 	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked_sparta1",
 	"suff" : "transcript.capmasked",
 	
 
-	"sRna" : "/share13/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
+	"sRna" : "/sharet/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
 	"numShuffledSets" : "1000",
 
-	"threads" : "48",
+	"threads" : "16",
 
 	"Comment2" : "Available RAM in GB, default set by original pipeline is 30 GB.",
-		"ram" : "30",
+		"ram" : "1",
 	"Comment3" : "Number of cores available for multi-threaded programs. I set this as 12, but default is 1.",
-		"cpu" : "48",
+		"cpu" : "2",
 	"Comment4" : "Gene (--sjdbGTFtagExonParentGene) and Transcript (--sjdbGTFtagExonParentTranscript) tags passed to STAR - setup",
 		"gtf_gene_tag" : "gene_id",
 		"gtf_transcript_tag" : "transcript_id",
@@ -50,7 +50,7 @@
 		"nucleotideWIN1" : "20",
 		"nucleotideWIN2" : "50",
 
-	"programDir" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate",
+	"programDir" : "/sharet/nanoPAREUpdate",
 
 		"Appended folders program" : "To programDir",
 
@@ -77,7 +77,7 @@
 				"createRefTable" : "python/createRefTable.py",
 
 
-	"dataDir" : "/share/quonlab/workspaces/tmathieu/meyersData",
+	"dataDir" : "/sharet/meyersData",
 
 		"Appended folders program" : "To dataDir",
 			"shuffleDir" : "shuffleDirSparta_1",

@@ -2,7 +2,7 @@ import os, sys, glob
 
 ##---GLOBAL---##
 
-configfile: "config_sparta.json"
+configfile: "config_sparta_aws.json"
 localrules: all
 
 #os.system('rm endCutStep2Done.txt') #Tell Mathieu for debuggingg or rerunning a step when fixing a mistake

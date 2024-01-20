@@ -1,0 +1,19 @@
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - "python>=3.8"
+  - "star>=2.5"
+  - "bedtools>=2.26"
+  - "samtools>=1.3"
+  - "perl>=5.22"
+  - "viennarna>=2.3"
+  - numpy
+  - scipy
+  - bowtie2
+  - r
+  - bioconductor-survcomp
+  - r-stringr
+  - snakemake
+  - cutadapt
+

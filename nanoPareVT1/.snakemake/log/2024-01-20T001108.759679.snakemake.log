@@ -1,0 +1,81 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Sparta_collapse           1
+Sparta_endtime            1
+Sparta_starttime          1
+all                       1
+endClass_sh               1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+endGraph_sh               1
+endMap_sh                 1
+endMask_sh                1
+setup_sh                  1
+total                    14
+
+Select jobs to execute...
+
+[Sat Jan 20 00:11:09 2024]
+rule setup_sh:
+    input: /sharet/meyersData/FASTQsparta1
+    output: /sharet/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    jobid: 8
+    reason: Missing output files: /sharet/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 00:11:14 2024]
+Finished job 8.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Sat Jan 20 00:11:14 2024]
+rule endMap_sh:
+    input: /sharet/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    output: /sharet/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    jobid: 13
+    reason: Missing output files: /sharet/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt; Input files updated by another job: /sharet/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 00:11:36 2024]
+Finished job 13.
+2 of 14 steps (14%) done
+Select jobs to execute...
+
+[Sat Jan 20 00:11:36 2024]
+rule endGraph_sh:
+    input: /sharet/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    output: /sharet/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    jobid: 12
+    reason: Missing output files: /sharet/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt; Input files updated by another job: /sharet/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 00:11:39 2024]
+Error in rule endGraph_sh:
+    jobid: 12
+    input: /sharet/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    output: /sharet/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    shell:
+        
+		st=`date +%s`
+		bash endGraphBash.sh /sharet/meyersData/reference_sparta1.table /sharet/nanoPAREUpdate/nanoPARE/endGraph.sh /sharet/nanoPAREUpdate/nanoPARE/resources/genome.fasta /sharet/nanoPAREUpdate/nanoPARE/resources/annotation.gff 1 2 laplace 15 200
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDGRAPH_DONE ($rt s)" >> /sharet/meyersData/runtimesparta_1.log
+		echo DONE > /sharet/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-20T001108.759679.snakemake.log

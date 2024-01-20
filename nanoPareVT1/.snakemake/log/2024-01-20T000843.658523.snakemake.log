@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule setup_sh in file /sharet/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 19:
+Missing input files for rule setup_sh:
+    output: /share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    affected files:
+        /share/quonlab/workspaces/tmathieu/meyersData/FASTQsparta1
