@@ -1,0 +1,4 @@
+fasta=./genomic_seq.fa
+genomeFeature=0
+size=0.59MB
+frags=./genomic_seq.fa

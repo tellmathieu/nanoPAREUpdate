@@ -11,7 +11,7 @@ export WSEQ=$2
 
 ########################################
 
-export BG=$WSEQ$outDir_s/${sample_name}.$outDir_a.bedgraph
+export BG=$WSEQ/$outDir_s/${sample_name}.$outDir_a.bedgraph
 export BG_norm=$BG.norm
 
 echo 'Number of lines in original bedgraph:'

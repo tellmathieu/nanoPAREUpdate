@@ -1,0 +1,151 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Sparta_collapse           1
+Sparta_endtime            1
+Sparta_starttime          1
+all                       1
+endClass_sh               1
+endCutNormalize_sh        1
+endCutShuffle_sh          1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+endGraph_sh               1
+endMap_sh                 1
+endMask_sh                1
+setup_sh                  1
+total                    14
+
+Select jobs to execute...
+
+[Sat Jan 20 23:52:56 2024]
+rule setup_sh:
+    input: /home/ec2-user/meyersData/FASTQsparta1
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    jobid: 8
+    reason: Updated input files: /home/ec2-user/meyersData/FASTQsparta1
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:53:01 2024]
+Finished job 8.
+1 of 14 steps (7%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:53:01 2024]
+rule endMap_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    jobid: 13
+    reason: Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:55:33 2024]
+Finished job 13.
+2 of 14 steps (14%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:55:33 2024]
+rule endGraph_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    jobid: 12
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt; Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:56:08 2024]
+Finished job 12.
+3 of 14 steps (21%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:56:08 2024]
+rule endClass_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+    jobid: 11
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt; Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endGraphSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:56:13 2024]
+Finished job 11.
+4 of 14 steps (29%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:56:13 2024]
+rule endMask_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    jobid: 10
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt; Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endClassSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:56:20 2024]
+Finished job 10.
+5 of 14 steps (36%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:56:20 2024]
+checkpoint endCutShuffle_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    output: /home/ec2-user/meyersData/shuffleDirSparta_1, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt
+    jobid: 7
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt; Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+DAG of jobs will be updated after completion.
+
+[Sat Jan 20 23:56:33 2024]
+Finished job 7.
+6 of 14 steps (43%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:56:34 2024]
+rule Sparta_starttime:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    jobid: 9
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:56:34 2024]
+Finished job 9.
+7 of 1014 steps (1%) done
+Select jobs to execute...
+
+[Sat Jan 20 23:56:34 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.120.shuffled.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.120.shuffled.pred.sites.bed
+    jobid: 137
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.120.shuffled.pred.sites.bed; Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt
+    wildcards: miRShuffled=anno.mir.tas.120.shuffled
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sat Jan 20 23:56:34 2024]
+Error in rule endCutSparta_sh:
+    jobid: 137
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.120.shuffled.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.120.shuffled.pred.sites.bed
+    shell:
+        
+		#execution of miRferno from the sPARTA program
+		python3 /home/ec2-user/nanoPAREUpdate/sPARTA/sPARTA.py -genomeFile /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -annoType GFF -annoFile /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff -genomeFeature 0 -miRNAFile /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.120.shuffled.fa -tarPred H -tarScore S --map2DD
+
+		awk 'NR > 1' predicted/All.targs.parsed.csv | awk -F "," '{print $2,$3,$1,$6}' | awk -F " " '{split($2,a,"-"); print $1,a[1],a[2],$3,$4}' | sort -k1,1 -k2,2n | awk -F ' ' -v OFS="	" '{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}' > /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.120.shuffled.pred.sites.bed
+
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-20T235255.100995.snakemake.log

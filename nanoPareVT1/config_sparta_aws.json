@@ -2,8 +2,8 @@
 	"Title" : "nanoPARE Pipeline Adapted with sPARTA",
 	"Description" : "Adapted version of nanoPARE Pipeline with sPARTA to make it quicker",
 
-	"fastaRef" : "/sharet/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
-	"annotation" : "/sharet/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
+	"fastaRef" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
+	"annotation" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
 
 	"AnnoTypeComment" : "Type of the Annotation File above, either GFF or GTF",
 		"annotationType" : "GFF",
@@ -11,18 +11,18 @@
 	"genomeFeatureComment" : "0 for genic regions, or 1 for intergenic regions",
 		"genomeFeature" : "0",
 
-	"refTable" : "/sharet/meyersData/reference_sparta1.table",
+	"refTable" : "/home/ec2-user/meyersData/reference_sparta1.table",
 		"seq_run_SE_or_PE" : "SE",
 		"adapter_seq" : "nextera",
-	"fastqDir" : "/sharet/meyersData/FASTQsparta1",
-	"runtime_log" : "/sharet/meyersData/runtimesparta_1.log",
+	"fastqDir" : "/home/ec2-user/meyersData/FASTQsparta1",
+	"runtime_log" : "/home/ec2-user/meyersData/runtimesparta_1.log",
 	
 
 	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked_sparta1",
 	"suff" : "transcript.capmasked",
 	
 
-	"sRna" : "/sharet/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
+	"sRna" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
 	"numShuffledSets" : "1000",
 
 	"threads" : "16",
@@ -50,7 +50,7 @@
 		"nucleotideWIN1" : "20",
 		"nucleotideWIN2" : "50",
 
-	"programDir" : "/sharet/nanoPAREUpdate",
+	"programDir" : "/home/ec2-user/nanoPAREUpdate",
 
 		"Appended folders program" : "To programDir",
 
@@ -77,7 +77,7 @@
 				"createRefTable" : "python/createRefTable.py",
 
 
-	"dataDir" : "/sharet/meyersData",
+	"dataDir" : "/home/ec2-user/meyersData",
 
 		"Appended folders program" : "To dataDir",
 			"shuffleDir" : "shuffleDirSparta_1",

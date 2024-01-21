@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-runtime_log="runtimejan2orig.log"
+runtime_log="runtimejan20orig.log"
 ref="/share/quonlab/workspaces/tmathieu/meyersData/reference.table"
 normalize="http://esb.genomecenter.ucdavis.edu/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02_normalize.sh"
 
