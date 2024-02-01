@@ -1,0 +1,43 @@
+//////////START-orig-manual-pipeline (1705991593 )
+//////////SETUP_DONE (4 s)
+//////////ENDCUT_GSTAR_2_DONE 572 s
+//////////ENDCUT_NORMALIZE_DONE (1 s)
+//////////ENDCUT_STEP1_WIN1_DONE (0 s)
+//////////ENDCUT_STEP1_WIN2_DONE (0 s)
+//////////ENDCUT_STEP2_DONE (10 s)
+nanoPARE run success pipestance exiting
+//////////ENDMAP_FINISHED (219 s)
+//////////ENDGRAPH_FINISHED! (37 s)
+//////////ENDCLASS_FINISHED! (6 s)
+//////////ENDMASK_FINISHED! (2 s)
+//////////ENDCUT_SHUFFLER_1_DONE (13 s)
+//////////ENDCUT_NORMALIZE_DONE (0 s)
+//////////ENDCUT_STEP1_WIN1_DONE (168 s)
+//////////ENDCUT_STEP1_WIN2_DONE (165 s)
+//////////ENDCUT_STEP2_DONE (9 s)
+nanoPARE run success pipestance exiting
+//////////ENDCUT_NORMALIZE_DONE (0 s)
+//////////ENDCUT_STEP1_WIN1_DONE (177 s)
+//////////ENDCUT_STEP1_WIN2_DONE (172 s)
+//////////ENDCUT_STEP2_DONE (8 s)
+nanoPARE run success pipestance exiting
+//////////ENDCUT_NORMALIZE_DONE (0 s)
+//////////ENDCUT_NORMALIZE_DONE (0 s)
+//////////ENDCUT_NORMALIZE_DONE (0 s)
+//////////ENDMASK_FINISHED! (3 s)
+//////////ENDMASK_FINISHED! (3 s)
+//////////ENDMASK_FINISHED! (3 s)
+//////////ENDMASK_FINISHED! (3 s)
+//////////ENDMASK_FINISHED! (2 s)
+//////////ENDMASK_FINISHED! (2 s)
+//////////ENDMASK_FINISHED! (2 s)
+//////////ENDMASK_FINISHED! (8 s)
+//////////ENDCUT_NORMALIZE_DONE (0 s)
+//////////ENDCUT_STEP1_WIN1_DONE (149 s)
+//////////ENDCUT_STEP1_WIN2_DONE (151 s)
+//////////ENDCUT_STEP2_DONE (6 s)
+nanoPARE run success pipestance exiting
+//////////ENDCUT_STEP2_DONE (7 s)
+nanoPARE run success pipestance exiting
+//////////ENDCUT_STEP2_DONE (31 s)
+nanoPARE run success pipestance exiting

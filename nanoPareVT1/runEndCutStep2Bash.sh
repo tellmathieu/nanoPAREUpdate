@@ -12,5 +12,5 @@ sampleNames=($(cat $refTable | awk '{ print $4 }' | sort | uniq))
 
 for name in ${sampleNames[@]}
 	do
-		Rscript $step2 ${name} $dataDir$transcript_bedgraph_capmaskedDir/${name} $suff $endCutResourceDir $numShuffledSets $dataDir $transcript_bedgraph_capmaskedDir
+		Rscript $step2 ${name} $dataDir/$transcript_bedgraph_capmaskedDir/${name} $suff $endCutResourceDir $numShuffledSets $dataDir $transcript_bedgraph_capmaskedDir
 	done

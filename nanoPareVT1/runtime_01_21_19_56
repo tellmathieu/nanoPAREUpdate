@@ -1,8 +1,0 @@
-tarPred:H | tarScore: S | Uniq filter:True
-Libs:
-GenomeFile:/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta | GenomeFeature:0
-Libs: Fragmentation time is : 0.01
-Target prediction time is : 6.51
-PARE processing and mapping time is : 0.0
-Indexing and Prediction run time is : 0.0 seconds 
-Script run time is : 6.52

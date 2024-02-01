@@ -70,19 +70,19 @@ library(survcomp)
 
 ################################################FUNCTIONS################################################
 get.sRNAs.anno <- function(sRNA.type) {
-  df = read.delim(paste(dataRoot,'Ath_annotations/anno.',sRNA.type,'.tsv',sep=''),sep='\t', row.names=1, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  df = read.delim(paste(dataRoot,'/Ath_annotations/anno.',sRNA.type,'.tsv',sep=''),sep='\t', row.names=1, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
   return(df)
 }
 
 get.common <- function() {
-  anno = read.delim(paste(dataRoot,'Ath_annotations/gene_aliases_20130130.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  anno = read.delim(paste(dataRoot,'/Ath_annotations/gene_aliases_20130130.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
   names.new = make.names(anno$locus_name, unique=TRUE)
   rownames(anno) = names.new
   return(anno)
 }
 
 get.5pTargets <- function(sRNA.type) {
-  targets = read.delim(paste(dataRoot,'Ath_annotations/sRNA_targets_5pRACE.tsv',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  targets = read.delim(paste(dataRoot,'/Ath_annotations/sRNA_targets_5pRACE.tsv',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
   targets.sub=subset(targets, select=c(sRNA,targetAGI))
   tar.fam.v=c()
   if (sRNA.type=='miRNA') {
@@ -102,10 +102,13 @@ get.detected.sites <- function(dir,sample,suff,window,sRNA.df,shuff.num) {
   
   #get df of fc and Allen frequencies
   test=data.frame()
-  test = read.delim(paste(resultsRoot,folderName,'/',sample,'/anno.mir.tas.fa_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  test = read.delim(paste(resultsRoot,'/',folderName,'/',sample,'/anno.mir.tas.fa_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  print(test)
   ##subset for specific sRNA isoforms
   test = subset(test, sRNA %in% rownames(sRNA.df))
   
+  print(test)
+
   #sort by Allen, rpm and sRNA
   test = test[order(test$AllenScore,test$slice.site.rpm,test$sRNA, decreasing=c(FALSE,TRUE,FALSE),method="radix"),] # Mathieu added radix method
   
@@ -123,7 +126,7 @@ get.detected.sites <- function(dir,sample,suff,window,sRNA.df,shuff.num) {
   
   #remove self:self hits
   ##get df of sRNAs and their precursors
-  target.AGI.df = read.delim(paste(dataRoot,'Ath_annotations/miRBase21_and_TAIR10_miRNA_tasiRNA_precursors.txt',sep=''),sep='\t', row.names=1, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+  target.AGI.df = read.delim(paste(dataRoot,'/Ath_annotations/miRBase21_and_TAIR10_miRNA_tasiRNA_precursors.txt',sep=''),sep='\t', row.names=1, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
   
   test.new = data.frame()
   
@@ -162,7 +165,7 @@ get.detected.sites <- function(dir,sample,suff,window,sRNA.df,shuff.num) {
   shuff = data.frame()
   shuff = as.data.frame(setNames(replicate(length(names(test)),numeric(0), simplify = F), names(names(test))))
   for (i in 0:(shuff.num-1)) {
-    shuff.sub = read.delim(paste(resultsRoot,folderName,'/',sample,'/anno.mir.tas.',i,'.shuffled.fa_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
+    shuff.sub = read.delim(paste(resultsRoot,'/',folderName,'/',sample,'/anno.mir.tas.',i,'.shuffled_',sample,'.',suff,'_win_',window,'_detectedSites.txt',sep=''),sep='\t', row.names=NULL, header=TRUE,stringsAsFactors=FALSE,strip.white=TRUE)
     shuff.sub = subset(shuff.sub, sRNA %in% rownames(sRNA.df))
     shuff = rbind(shuff,shuff.sub)
   }
@@ -239,15 +242,18 @@ get.target.sites <- function(dir,sites,sample.name) {
       allen.p.val = ecdf(ind.shuff$AllenScore)(ind.test$AllenScore)
     
       final = rbind(final,data.frame(subset(test,sRNA==sRNA.u),'fc.p.val'=fc.p.val,'allen.p.val'=allen.p.val))
-    
-    
-      sRNA.u1 <- gsub("'","", sRNA.u) #Mathieu added to be able to create files
-      
+      print(sRNA.u)
+      paste(print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^1"))
 
-      plotFile=paste(resultsRoot,dir,'/',name,'/cdfs/',sRNA.u1,'.',sample.name,'.fc.ecdf.pdf',sep='')
+      sRNA.u1 <- gsub("'","", sRNA.u) #Mathieu added to be able to create files
+      print(sRNA.u1)
+      print(sample.name)
+      
+      paste(print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^2"))
+      plotFile=paste(dir,'/cdfs/',sRNA.u1,'.',sample.name,'.fc.ecdf.pdf',sep='')
 
       pdf(plotFile, useDingbats=FALSE, width=5, height=8)
-      paste(print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"))
+      paste(print("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^3"))
       par(mfrow = c(2,1))
       plot(NULL, main=paste('Detected', sRNA.u, 'sites in',sample.name), xlab='Fold-changes', ylab='Proportion', las=1, xlim=c(0,max(c(ind.shuff$fc.new,ind.test$fc.new),na.rm=T)), ylim=c(0,1.0))
       lines(ecdf(ind.shuff$fc.new), pch=1)
@@ -415,13 +421,13 @@ anno.miRNAs = get.sRNAs.anno('miRNA')
 anno.tasiRNAs = get.sRNAs.anno('tasiRNA')
 
 print("Testing for tasiRNA targets...")
-sample.tas = get.tars(folderName,name,suff,anno.tasiRNAs,as.integer(numShuffledSets))
+sample.tas = get.tars(dir,name,suff,anno.tasiRNAs,as.integer(numShuffledSets))
 print("Testing for miRNA targets...")
-sample.mir = get.tars(folderName,name,suff,anno.miRNAs,as.integer(numShuffledSets))
+sample.mir = get.tars(dir,name,suff,anno.miRNAs,as.integer(numShuffledSets))
 
 #write to tsv files
 print("Writing to outfiles...")
 ##tasiRNAs
-print.tables(sample.tas[[1]],paste(folderName,'/',name,'/',name,'.anno.tas.allen',sep=''))
+print.tables(sample.tas[[1]],paste('/',folderName,'/',name,'/',name,'.anno.tas.allen',sep=''))
 ##miRNAs
-print.tables(sample.mir[[1]],paste(folderName,'/',name,'/',name,'.anno.mir.allen',sep=''))
+print.tables(sample.mir[[1]],paste('/',folderName,'/',name,'/',name,'.anno.mir.allen',sep=''))

@@ -2,20 +2,20 @@
 	"Title" : "nanoPARE Pipeline Adapted with GSTAr",
 	"Description" : "Adapted version of nanoPARE Pipeline with GSTAr",
 
-	"fastaRef" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
-	"annotation" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
-	"refTable" : "/share/quonlab/workspaces/tmathieu/meyersData/reference2smg.table",
+	"fastaRef" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
+	"annotation" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
+	"refTable" : "/home/ec2-user/meyersData/reference2smg.table",
 		"seq_run_SE_or_PE" : "SE",
 		"adapter_seq" : "nextera",
-	"fastqDir" : "/share/quonlab/workspaces/tmathieu/meyersData/FASTQsmg",
-	"runtime_log" : "/share/quonlab/workspaces/tmathieu/meyersData/runtimegstar_smg.log",
+	"fastqDir" : "/home/ec2-user/meyersData/FASTQsmg",
+	"runtime_log" : "/home/ec2-user/meyersData/runtimegstar_smg.log",
 	
 
 	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked_smg",
 	"suff" : "transcript.capmasked",
 	
 
-	"sRna" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
+	"sRna" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
 	"numShuffledSets" : "1000",
 
 	"threads" : "48",
@@ -43,7 +43,7 @@
 		"nucleotideWIN1" : "20",
 		"nucleotideWIN2" : "50",
 
-	"programDir" : "/share/quonlab/workspaces/tmathieu/meyers/nanoPAREUpdate",
+	"programDir" : "/home/ec2-user/nanoPAREUpdate",
 
 		"Appended folders program" : "To programDir",
 
@@ -71,7 +71,7 @@
 				"createRefTable" : "python/createRefTable.py",
 
 
-	"dataDir" : "/share/quonlab/workspaces/tmathieu/meyersData",
+	"dataDir" : "/home/ec2-user/meyersData",
 
 		"Appended folders program" : "To dataDir",
 			"shuffleDir" : "shuffleDirGSTArNew_smg",

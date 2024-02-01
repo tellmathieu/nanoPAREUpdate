@@ -202,8 +202,10 @@ checkpoint endCutShuffle_sh:
 		'''
 		export st=`date +%s`
 		mkdir -p {params.dataShuffleDir}
-		python3 {params.shuffle} {params.sRna} {params.numShuffledSets} {output}
 		
+		python3 {params.shuffle} {params.sRna} {params.numShuffledSets} {output}
+		cp {params.sRna} {params.dataShuffleDir}/
+
 		#removing integers from file names
 		bash removeIntegers.sh {params.dataShuffleDir} {params.mainDir}
 
@@ -264,7 +266,6 @@ rule endCutSparta_sh:
 		python3 {params.sparta_prog} -genomeFile {params.genomeFasta} -annoType {params.annoType} -annoFile {params.genomeAnnotation} -genomeFeature {params.genomeFeature} -miRNAFile {input.miRfa} -tarPred H -tarScore S --map2DD
 
 		awk 'NR > 1' predicted/All.targs.parsed.csv | awk -F "," '{{print $2,$3,$1,$6}}' | awk -F " " '{{split($2,a,"-"); print $1,a[1],a[2],$3,$4}}' | sort -k1,1 -k2,2n | awk -F ' ' -v OFS="\t" '{{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}}' > {params.bedgraphDir}/{wildcards.miRShuffled}.pred.sites.bed
-
 		'''
 
 def aggregate_input(wildcards):
@@ -332,7 +333,7 @@ rule endCutNormalize_sh:
 		'''
 		st=`date +%s`
 		
-		bash runEndCutNormalizeBash.sh {params.normalize} {params.refTable} {params.dataDir} {params.transcript_bedgraph_capmaskedDir} {params.suff}
+		bash runEndCutNormalizeBash.sh {params.normalize} {params.refTable} {params.dataDir} {params.transcript_bedgraph_capmaskedDir} {params.suff} {params.resultsEndMask}
 		et=`date +%s`
 		rt=$((et-st))
 		echo "//////////ENDCUT_NORMALIZE_DONE ($rt s)" >> {params.runtime_log}
@@ -351,6 +352,7 @@ rule endCutStep1WIN1_sh:
 		refTable = config["refTable"],
 		WIN = config["nucleotideWIN1"],
 		dataDir = config["dataDir"],
+		resultsEndMask = os.path.join(config["programDir"], config["nanoDir"], config["resultsEndMask"]),
 		transcript_bedgraph_capmaskedDir = config["transcript_bedgraph_capmaskedDir"],
 		suff = config["suff"],
 		runtime_log = config["runtime_log"],
@@ -364,7 +366,7 @@ rule endCutStep1WIN1_sh:
 	shell:
 		'''
 		st=`date +%s`
-		bash runEndCutStep1Bash.sh {params.step1} {params.refTable} {params.dataDir} {params.WIN} {params.transcript_bedgraph_capmaskedDir} {params.suff} {params.spartaDir} {params.dataShuffleDir}
+		bash runEndCutStep1Bash.sh {params.step1} {params.refTable} {params.dataDir} {params.WIN} {params.transcript_bedgraph_capmaskedDir} {params.suff} {params.spartaDir} {params.dataShuffleDir} {params.resultsEndMask}
 		et=`date +%s`
 		rt=$((et-st))
 		echo "//////////ENDCUT_STEP1_WIN1_DONE ($rt s)" >> {params.runtime_log}
@@ -383,6 +385,7 @@ rule endCutStep1WIN2_sh:
 		refTable = config["refTable"],
 		WIN = config["nucleotideWIN2"],
 		dataDir = config["dataDir"],
+		resultsEndMask = os.path.join(config["programDir"], config["nanoDir"], config["resultsEndMask"]),
 		transcript_bedgraph_capmaskedDir = config["transcript_bedgraph_capmaskedDir"],
 		suff = config["suff"],
 		runtime_log = config["runtime_log"],
@@ -396,7 +399,7 @@ rule endCutStep1WIN2_sh:
 	shell:
 		'''
 		st=`date +%s`
-		bash runEndCutStep1Bash.sh {params.step1} {params.refTable} {params.dataDir} {params.WIN} {params.transcript_bedgraph_capmaskedDir} {params.suff} {params.spartaDir} {params.dataShuffleDir}
+		bash runEndCutStep1Bash.sh {params.step1} {params.refTable} {params.dataDir} {params.WIN} {params.transcript_bedgraph_capmaskedDir} {params.suff} {params.spartaDir} {params.dataShuffleDir} {params.resultsEndMask}
 		et=`date +%s`
 		rt=$((et-st))
 		echo "//////////ENDCUT_STEP1_WIN2_DONE ($rt s)" >> {params.runtime_log}

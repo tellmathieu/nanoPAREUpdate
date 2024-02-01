@@ -1,0 +1,90 @@
+#!/usr/bin/env bash
+
+runtime_log="runtimejan22orig.log"
+ref="/home/ec2-user/meyersData/reference.table"
+normalize="http://esb.genomecenter.ucdavis.edu/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02_normalize.sh"
+sRna="/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa"
+numShuffledSets=1000
+gstarsh="/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_GSTAr_v02_orig_slow.sh"
+dataShuffleDir="/home/ec2-user/meyersData/shuffleDir_orig_jan22"
+gstar_prog="/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/GSTAr.pl"
+transcriptome="/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/transcriptome.fasta"
+dataDir="/home/ec2-user/meyersData"
+gstarDir="GSTAr" #don't change this, the gstar step has this hardcoded.
+endCutResourceDir="/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources"
+
+st=`date +%s`
+echo "//////////START-orig-manual-pipeline (${st} )" > $runtime_log
+bash nanoPARE_setup.sh -R $ref -G /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 1 --cpus 2 > setup.stdout.log 2> setup.stderr.log
+et=`date +%s`
+rt=$((et-st))
+echo "//////////SETUP_DONE (${rt} s)" >> $runtime_log
+
+st=`date +%s`
+# Modify the range of numbers to account for the number of rows in resources/reference.table
+for l in {1..6} ;do bash endMap.sh -L "${l}" -R $ref  -G /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --cpus 2 >> endmap.stdout.log 2>> endmap.stderr.log;done
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDMAP_FINISHED (${rt} s)" >> $runtime_log
+
+st=`date +%s`
+# Modify the range of numbers to accommodate the number of samples you will be processing
+for n in {1..3} ;do bash endGraph.sh -N "test${n}" -R $ref  -G /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --cpus 2 >> endgraph.stdout.log 2>> endgraph.stderr.log;done
+
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDGRAPH_FINISHED! (${rt} s)" >> $runtime_log
+
+st=`date +%s`
+bash endClass.sh --type test -R $ref  -G /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --cpus 2 >> endclass.stdout.log 2>> endclass.stderr.log
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCLASS_FINISHED! (${rt} s)" >> $runtime_log
+
+st=`date +%s`
+bash endMask.sh --type test -R $ref -G /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --cpus 2 >> endmask.stdout.log 2>> endmask.stderr.log
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDMASK_FINISHED! (${rt} s)" >> $runtime_log
+
+
+st=`date +%s`
+python3 /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/sRNA_shuffler.py $sRna 1000 /home/ec2-user/meyersData/shuffleDir_orig_jan22
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCUT_SHUFFLER_1_DONE (${rt} s)" >> $runtime_log
+
+st=`date +%s`
+bash $gstarsh $dataShuffleDir $sRna $gstar_prog $transcriptome $dataDir
+
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCUT_GSTAR_2_DONE ${rt} s" >> $runtime_log
+
+st=`date +%s`
+		
+bash /home/ec2-user/nanoPAREUpdate/nanoPareVT1/runEndCutNormalizeBash.sh $normalize $ref $dataDir "transcript_bedgraph_capmasked_orig_jan2"
+ "transcript.capmasked"
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCUT_NORMALIZE_DONE ($rt s)" >> $runtime_log
+
+st=`date +%s`
+bash /home/ec2-user/nanoPAREUpdate/nanoPareVT1/runEndCutStep1Bash.sh /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02.sh $ref $dataDir 20 "transcript_bedgraph_capmasked_orig_jan22" "transcript.capmasked" $gstarDir $dataShuffleDir $resultsEndMask
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCUT_STEP1_WIN1_DONE ($rt s)" >> $runtime_log
+
+st=`date +%s`
+bash /home/ec2-user/nanoPAREUpdate/nanoPareVT1/runEndCutStep1Bash.sh /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02.sh $ref $dataDir 50 "transcript_bedgraph_capmasked_orig_jan22" "transcript.capmasked" $gstarDir $dataShuffleDir $resultsEndMask
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCUT_STEP1_WIN2_DONE ($rt s)" >> $runtime_log
+
+st=`date +%s`
+bash /home/ec2-user/nanoPAREUpdate/nanoPareVT1/runEndCutStep2Bash.sh /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R $ref $dataDir "transcript_bedgraph_capmasked_orig_jan22" "transcript.capmasked" $numShuffledSets $endCutResourceDir
+et=`date +%s`
+rt=$((et-st))
+echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> $runtime_log
+
+echo "nanoPARE run success pipestance exiting" >> $runtime_log'''

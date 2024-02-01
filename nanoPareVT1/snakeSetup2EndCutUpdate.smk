@@ -321,7 +321,7 @@ rule endCutNormalize_sh:
 		'''
 		st=`date +%s`
 		
-		bash runEndCutNormalizeBash.sh {params.normalize} {params.refTable} {params.dataDir} {params.transcript_bedgraph_capmaskedDir} {params.suff}
+		bash runEndCutNormalizeBash.sh {params.normalize} {params.refTable} {params.dataDir} {params.transcript_bedgraph_capmaskedDir} {params.suff} {params.resultsEndMask}
 		et=`date +%s`
 		rt=$((et-st))
 		echo "//////////ENDCUT_NORMALIZE_DONE ($rt s)" >> {params.runtime_log}

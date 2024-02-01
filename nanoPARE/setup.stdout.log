@@ -1,0 +1,82 @@
+
+_____________________________
+SETTINGS
+-----------------------------
+Basic configuration:
+  root_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE
+  bash_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/bash_scripts
+  python_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts
+  resource_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE/resources
+  temp_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE/temp
+  log_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE/log
+  results_dir=/home/ec2-user/nanoPAREUpdate/nanoPARE/results
+
+General settings:
+  GENOME_FASTA=/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta
+  ANNOTATION_GFF=/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff
+  LMOD=0
+  RAM=1
+  CPUS=2
+  
+EndMap settings:
+  LINE_NUMBER=
+  ICOMP=
+
+EndGraph settings:
+  SAMPLE_NAME=
+  RPM=
+  KERNEL=
+  BANDWIDTH=
+  FRAGLEN=
+
+EndClass settings:
+  SAMPLE_TYPE=
+  UUG=
+
+EndMask settings:
+  SAMPLE_TYPE=
+  MASK_SOURCE=
+_____________________________
+
+
+####################################
+### SETUP: GENERATE GENOME INDEX ###
+####################################
+python /home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/fasta_lengths.py /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta > /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/length.table
+Length table generated.
+ 
+STAR --runThreadN 2 --runMode genomeGenerate --genomeDir /home/ec2-user/nanoPAREUpdate/nanoPARE/temp/genome_index --outFileNamePrefix /home/ec2-user/nanoPAREUpdate/nanoPARE/log/ --genomeFastaFiles /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta --genomeSAindexNbases 8 --sjdbGTFfile /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --sjdbGTFtagExonParentTranscript transcript_id --sjdbGTFtagExonParentGene gene_id
+	/home/ec2-user/miniforge3/envs/nanopare6/bin/STAR-avx2 --runThreadN 2 --runMode genomeGenerate --genomeDir /home/ec2-user/nanoPAREUpdate/nanoPARE/temp/genome_index --outFileNamePrefix /home/ec2-user/nanoPAREUpdate/nanoPARE/log/ --genomeFastaFiles /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta --genomeSAindexNbases 8 --sjdbGTFfile /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --sjdbGTFtagExonParentTranscript transcript_id --sjdbGTFtagExonParentGene gene_id
+	STAR version: 2.7.11a   compiled: 2023-09-15T02:58:53+0000 :/opt/conda/conda-bld/star_1694746407721/work/source
+Jan 23 06:33:13 ..... started STAR run
+Jan 23 06:33:13 ... starting to generate Genome files
+Jan 23 06:33:13 ..... processing annotations GTF
+Jan 23 06:33:13 ... starting to sort Suffix Array. This may take a long time...
+Jan 23 06:33:13 ... sorting Suffix Array chunks and saving them to disk...
+Jan 23 06:33:14 ... loading chunks from disk, packing SA...
+Jan 23 06:33:14 ... finished generating suffix array
+Jan 23 06:33:14 ... generating Suffix Array index
+Jan 23 06:33:14 ... completed Suffix Array index
+Jan 23 06:33:14 ..... inserting junctions into the genome indices
+Jan 23 06:33:15 ... writing Genome to disk ...
+Jan 23 06:33:15 ... writing Suffix Array to disk ...
+Jan 23 06:33:15 ... writing SAindex to disk
+Jan 23 06:33:15 ..... finished successfully
+Genome index complete.
+ 
+### GENERATE TSO MASKING FILES ###
+SEARCH: GGG,CAGG,CGAG,CGGA,ACGGG
+Ath_chr2 (GGG,CAGG,CGAG,CGGA,ACGGG) started.
+Ath_chr2 hits: 31314
+Sequence search complete.
+Masking BED files generated.
+ 
+Generating transcriptome FASTA file.
+### GENERATE ANNOTATION CLASS REFERENCE FILES ###
+   Getting transcript-level exons
+   Getting 5'-most exons
+   Converting transcript-level to gene-level annotations
+   Reformatting to GFF files to BED files
+   Reformatting to GFF files to BED files
+   Cleaning up temporary files
+Setup complete.

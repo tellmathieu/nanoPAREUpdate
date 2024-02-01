@@ -1,0 +1,57 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+all                       1
+endCutNormalize_sh        1
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                     5
+
+Select jobs to execute...
+
+[Mon Jan 22 07:31:51 2024]
+rule endCutNormalize_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutNormSpartaDone.txt
+    jobid: 4
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutNormSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Mon Jan 22 07:31:52 2024]
+Finished job 4.
+1 of 5 steps (20%) done
+Select jobs to execute...
+
+[Mon Jan 22 07:31:52 2024]
+rule endCutStep1WIN1_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutNormSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1SpartaDone.txt
+    jobid: 3
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1SpartaDone.txt; Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutNormSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Mon Jan 22 07:31:56 2024]
+Error in rule endCutStep1WIN1_sh:
+    jobid: 3
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutNormSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1SpartaDone.txt
+    shell:
+        
+		st=`date +%s`
+		bash runEndCutStep1Bash.sh /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/nanoPARE_EndCut.step1_v02.sh /home/ec2-user/meyersData/reference_sparta1.table /home/ec2-user/meyersData 20 transcript_bedgraph_capmasked_sparta1 transcript.capmasked /home/ec2-user/meyersData/sPARTA /home/ec2-user/meyersData/shuffleDirSparta_1
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP1_WIN1_DONE ($rt s)" >> /home/ec2-user/meyersData/runtimesparta_1.log
+		echo DONE > /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN1SpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2024-01-22T073150.264459.snakemake.log

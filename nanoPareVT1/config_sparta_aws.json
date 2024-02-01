@@ -66,7 +66,7 @@
 				"5endCutResourceDir" : "EndCut.pipeline/resources",
 					"5.1-shuffle" : "sRNA_shuffler.py",
 					"5.3-normalize" : "nanoPARE_EndCut.step1_v02_normalize.sh",
-					"5.4-step1" : "nanoPARE_EndCut.step1_v02.sh",
+					"5.4-step1" : "nanoPARE_EndCut.step1_sparta.sh",
 					"5.5-step2" : "EndCut_step2.v03.git.R",
 
 

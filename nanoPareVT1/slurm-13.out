@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Sparta_collapse           1
+Sparta_endtime            1
+all                       1
+endCutNormalize_sh        1
+endCutSparta_sh        1000
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                  1007
+
+Select jobs to execute...
+
+[Sun Jan 21 23:59:32 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.998.shuffled.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.998.shuffled.pred.sites.bed
+    jobid: 1014
+    reason: Code has changed since last execution
+    wildcards: miRShuffled=anno.mir.tas.998.shuffled
+    threads: 2
+    resources: tmpdir=/tmp
+
+RuleException in rule endCutSparta_sh in file /home/ec2-user/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta1.smk, line 234:
+NameError: The name 'miRShuffled' is unknown in this context. Did you mean 'wildcards.miRShuffled'?, when formatting the following:
+
+		#execution of miRferno from the sPARTA program
+		python3 {params.sparta_prog} -genomeFile {params.genomeFasta} -annoType {params.annoType} -annoFile {params.genomeAnnotation} -genomeFeature {params.genomeFeature} -miRNAFile {input.miRfa} -tarPred H -tarScore S --map2DD
+
+		awk 'NR > 1' predicted/All.targs.parsed.csv | awk -F "," '{{print $2,$3,$1,$6}}' | awk -F " " '{{split($2,a,"-"); print $1,a[1],a[2],$3,$4}}' | sort -k1,1 -k2,2n | awk -F ' ' -v OFS="	" '{{split($4,a,"_shuffled"); print $1,$2,$3,a[1],$5}}' > {params.bedgraphDir}/{wildcards.miRShuffled}.pred.sites.bed
+		rm {params.bedgraphDir}/{miRShuffled}.fa_clean*
+		

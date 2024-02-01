@@ -1,0 +1,54 @@
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/test1.end_features.bed: No such file or directory
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/test2.end_features.bed: No such file or directory
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/test3.end_features.bed: No such file or directory
+
+*****
+***** ERROR: Requested column 6, but database file - only has fields 1 - 0.
+Traceback (most recent call last):
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 116, in <module>
+    print(output_best(get_unique(duplicate_lines),args.SELECT,args.STARTLINE,args.ENDLINE,args.STRANDLINE,args.SCORELINE))
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 64, in output_best
+    return bed_lines[sorted_order[-1]]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 116, in <module>
+    print(output_best(get_unique(duplicate_lines),args.SELECT,args.STARTLINE,args.ENDLINE,args.STRANDLINE,args.SCORELINE))
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 64, in output_best
+    return bed_lines[sorted_order[-1]]
+IndexError: list index out of range
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/test1.end_features.bed: No such file or directory
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/test2.end_features.bed: No such file or directory
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/test3.end_features.bed: No such file or directory
+
+*****
+***** ERROR: Requested column 6, but database file - only has fields 1 - 0.
+Traceback (most recent call last):
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 116, in <module>
+    print(output_best(get_unique(duplicate_lines),args.SELECT,args.STARTLINE,args.ENDLINE,args.STRANDLINE,args.SCORELINE))
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 64, in output_best
+    return bed_lines[sorted_order[-1]]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 116, in <module>
+    print(output_best(get_unique(duplicate_lines),args.SELECT,args.STARTLINE,args.ENDLINE,args.STRANDLINE,args.SCORELINE))
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 64, in output_best
+    return bed_lines[sorted_order[-1]]
+IndexError: list index out of range
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test1/test1.end_features.bed: No such file or directory
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test2/test2.end_features.bed: No such file or directory
+sed: can't read /home/ec2-user/nanoPAREUpdate/nanoPARE/results/EndGraph/test3/test3.end_features.bed: No such file or directory
+
+*****
+***** ERROR: Requested column 6, but database file - only has fields 1 - 0.
+Traceback (most recent call last):
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 116, in <module>
+    print(output_best(get_unique(duplicate_lines),args.SELECT,args.STARTLINE,args.ENDLINE,args.STRANDLINE,args.SCORELINE))
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 64, in output_best
+    return bed_lines[sorted_order[-1]]
+IndexError: list index out of range
+Traceback (most recent call last):
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 116, in <module>
+    print(output_best(get_unique(duplicate_lines),args.SELECT,args.STARTLINE,args.ENDLINE,args.STRANDLINE,args.SCORELINE))
+  File "/home/ec2-user/nanoPAREUpdate/nanoPARE/scripts/python_scripts/bed_deduplicate.py", line 64, in output_best
+    return bed_lines[sorted_order[-1]]
+IndexError: list index out of range

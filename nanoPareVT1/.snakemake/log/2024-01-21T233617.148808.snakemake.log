@@ -1,0 +1,1274 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+Sparta_collapse           1
+Sparta_endtime            1
+all                       1
+endCutNormalize_sh        1
+endCutSparta_sh        1000
+endCutStep1WIN1_sh        1
+endCutStep1WIN2_sh        1
+endCutStep2_sh            1
+total                  1007
+
+Select jobs to execute...
+
+[Sun Jan 21 23:36:31 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.646.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.646.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2176
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.646.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.646.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:36:42 2024]
+Finished job 2176.
+1 of 1007 steps (0.1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:36:42 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.192.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.192.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2116
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.192.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.192.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:36:52 2024]
+Finished job 2116.
+2 of 1007 steps (0.2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:36:52 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.544.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.544.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2236
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.544.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.544.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:37:03 2024]
+Finished job 2236.
+3 of 1007 steps (0.3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:37:04 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.983.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.983.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2895
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.983.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.983.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:37:14 2024]
+Finished job 2895.
+4 of 1007 steps (0.4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:37:14 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.376.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.376.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2296
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.376.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.376.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:37:25 2024]
+Finished job 2296.
+5 of 1007 steps (0.5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:37:25 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.832.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.832.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2356
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.832.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.832.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:37:35 2024]
+Finished job 2356.
+6 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:37:36 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.147.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.147.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2716
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.147.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.147.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:37:46 2024]
+Finished job 2716.
+7 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:37:46 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.993.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.993.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2955
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.993.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.993.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:37:56 2024]
+Finished job 2955.
+8 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:37:56 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.215.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.215.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2776
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.215.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.215.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:38:07 2024]
+Finished job 2776.
+9 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:38:07 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.667.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.667.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2835
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.667.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.667.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:38:16 2024]
+Finished job 2835.
+10 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:38:17 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.587.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.587.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2836
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.587.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.587.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:38:26 2024]
+Finished job 2836.
+11 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:38:26 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.339.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.339.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2775
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.339.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.339.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:38:36 2024]
+Finished job 2775.
+12 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:38:36 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.669.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.669.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2896
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.669.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.669.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:38:46 2024]
+Finished job 2896.
+13 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:38:46 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.746.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.746.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2956
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.746.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.746.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:38:57 2024]
+Finished job 2956.
+14 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:38:57 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.852.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.852.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2908
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.852.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.852.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:39:07 2024]
+Finished job 2908.
+15 of 1007 steps (1%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:39:07 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.554.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.554.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2715
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.554.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.554.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:39:17 2024]
+Finished job 2715.
+16 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:39:17 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.352.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.352.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2821
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.352.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.352.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:39:26 2024]
+Finished job 2821.
+17 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:39:27 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.930.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.930.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2355
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.930.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.930.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:39:36 2024]
+Finished job 2355.
+18 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:39:37 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.675.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.675.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2117
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.675.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.675.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:39:47 2024]
+Finished job 2117.
+19 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:39:47 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.71.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.71.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2539
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.71.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.71.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:39:56 2024]
+Finished job 2539.
+20 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:39:57 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.12.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.12.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2599
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.12.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.12.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:40:07 2024]
+Finished job 2599.
+21 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:40:07 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.710.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.710.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2659
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.710.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.710.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:40:17 2024]
+Finished job 2659.
+22 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:40:17 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.974.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.974.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2766
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.974.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.974.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:40:27 2024]
+Finished job 2766.
+23 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:40:27 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.152.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.152.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2413
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.152.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.152.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:40:37 2024]
+Finished job 2413.
+24 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:40:37 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.826.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.826.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2533
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.826.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.826.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:40:47 2024]
+Finished job 2533.
+25 of 1007 steps (2%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:40:47 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.173.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.173.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2054
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.173.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.173.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:40:57 2024]
+Finished job 2054.
+26 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:40:58 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.549.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.549.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2414
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.549.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.549.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:41:08 2024]
+Finished job 2414.
+27 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:41:08 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.96.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.96.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2897
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.96.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.96.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:41:18 2024]
+Finished job 2897.
+28 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:41:18 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.447.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.447.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2957
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.447.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.447.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:41:28 2024]
+Finished job 2957.
+29 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:41:28 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.687.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.687.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2118
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.687.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.687.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:41:38 2024]
+Finished job 2118.
+30 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:41:38 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.337.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.337.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2178
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.337.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.337.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:41:48 2024]
+Finished job 2178.
+31 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:41:49 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.670.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.670.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2837
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.670.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.670.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:41:59 2024]
+Finished job 2837.
+32 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:41:59 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.365.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.365.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2238
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.365.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.365.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:42:09 2024]
+Finished job 2238.
+33 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:42:09 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.945.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.945.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2777
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.945.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.945.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:42:19 2024]
+Finished job 2777.
+34 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:42:19 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.209.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.209.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2298
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.209.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.209.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:42:29 2024]
+Finished job 2298.
+35 of 1007 steps (3%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:42:30 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.197.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.197.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2717
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.197.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.197.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:42:40 2024]
+Finished job 2717.
+36 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:42:40 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.422.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.422.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2358
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.422.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.422.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:42:50 2024]
+Finished job 2358.
+37 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:42:50 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.112.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.112.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2718
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.112.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.112.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:43:00 2024]
+Finished job 2718.
+38 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:43:00 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.282.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.282.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2778
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.282.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.282.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:43:10 2024]
+Finished job 2778.
+39 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:43:10 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.481.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.481.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2357
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.481.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.481.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:43:20 2024]
+Finished job 2357.
+40 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:43:20 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.677.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.677.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2838
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.677.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.677.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:43:30 2024]
+Finished job 2838.
+41 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:43:30 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.309.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.309.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2297
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.309.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.309.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:43:40 2024]
+Finished job 2297.
+42 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:43:40 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.806.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.806.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2898
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.806.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.806.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:43:51 2024]
+Finished job 2898.
+43 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:43:51 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.85.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.85.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2237
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.85.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.85.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:44:01 2024]
+Finished job 2237.
+44 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:44:01 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.817.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.817.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2958
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.817.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.817.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:44:12 2024]
+Finished job 2958.
+45 of 1007 steps (4%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:44:12 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.874.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.874.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2119
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.874.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.874.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:44:21 2024]
+Finished job 2119.
+46 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:44:22 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.31.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.31.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2239
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.31.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.31.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:44:32 2024]
+Finished job 2239.
+47 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:44:32 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.361.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.361.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2179
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.361.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.361.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:44:43 2024]
+Finished job 2179.
+48 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:44:43 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.295.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.295.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2299
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.295.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.295.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:44:53 2024]
+Finished job 2299.
+49 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:44:53 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.312.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.312.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2177
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.312.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.312.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:45:04 2024]
+Finished job 2177.
+50 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:45:04 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.216.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.216.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2359
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.216.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.216.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:45:14 2024]
+Finished job 2359.
+51 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:45:14 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.189.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.189.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2295
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.189.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.189.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:45:24 2024]
+Finished job 2295.
+52 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:45:24 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.747.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.747.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2719
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.747.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.747.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:45:34 2024]
+Finished job 2719.
+53 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:45:34 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.758.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.758.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2779
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.758.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.758.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:45:44 2024]
+Finished job 2779.
+54 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:45:44 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.433.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.433.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2839
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.433.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.433.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:45:54 2024]
+Finished job 2839.
+55 of 1007 steps (5%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:45:54 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.423.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.423.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2600
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.423.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.423.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:46:05 2024]
+Finished job 2600.
+56 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:46:05 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.166.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.166.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2060
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.166.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.166.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:46:16 2024]
+Finished job 2060.
+57 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:46:16 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.432.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.432.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2660
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.432.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.432.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:46:26 2024]
+Finished job 2660.
+58 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:46:26 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.21.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.21.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2061
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.21.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.21.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:46:37 2024]
+Finished job 2061.
+59 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:46:37 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.450.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.450.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2120
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.450.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.450.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:46:47 2024]
+Finished job 2120.
+60 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:46:47 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.60.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.60.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2180
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.60.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.60.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:46:58 2024]
+Finished job 2180.
+61 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:46:58 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.739.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.739.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2240
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.739.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.739.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:47:08 2024]
+Finished job 2240.
+62 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:47:08 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.349.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.349.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2300
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.349.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.349.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:47:18 2024]
+Finished job 2300.
+63 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:47:18 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.934.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.934.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2889
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.934.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.934.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:47:28 2024]
+Finished job 2889.
+64 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:47:28 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.805.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.805.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2360
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.805.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.805.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:47:38 2024]
+Finished job 2360.
+65 of 1007 steps (6%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:47:38 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.77.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.77.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2959
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.77.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.77.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:47:48 2024]
+Finished job 2959.
+66 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:47:48 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.818.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.818.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2720
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.818.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.818.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:47:58 2024]
+Finished job 2720.
+67 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:47:58 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.872.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.872.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2899
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.872.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.872.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:48:08 2024]
+Finished job 2899.
+68 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:48:09 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.104.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.104.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2780
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.104.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.104.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:48:18 2024]
+Finished job 2780.
+69 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:48:18 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.987.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.987.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2840
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.987.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.987.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:48:28 2024]
+Finished job 2840.
+70 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:48:28 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.487.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.487.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2900
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.487.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.487.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:48:39 2024]
+Finished job 2900.
+71 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:48:39 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.497.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.497.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2235
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.497.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.497.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:48:49 2024]
+Finished job 2235.
+72 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:48:50 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.698.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.698.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2960
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.698.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.698.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:49:00 2024]
+Finished job 2960.
+73 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:49:00 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.76.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.76.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2175
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.76.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.76.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:49:10 2024]
+Finished job 2175.
+74 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:49:10 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.809.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.809.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2121
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.809.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.809.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:49:20 2024]
+Finished job 2121.
+75 of 1007 steps (7%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:49:20 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.731.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.731.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2115
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.731.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.731.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:49:30 2024]
+Finished job 2115.
+76 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:49:30 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.125.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.125.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2181
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.125.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.125.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:49:41 2024]
+Finished job 2181.
+77 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:49:41 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.771.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.771.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2241
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.771.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.771.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:49:52 2024]
+Finished job 2241.
+78 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:49:52 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.288.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.288.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2301
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.288.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.288.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:50:02 2024]
+Finished job 2301.
+79 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:50:02 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.212.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.212.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 3015
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.212.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.212.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:50:13 2024]
+Finished job 3015.
+80 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:50:13 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.269.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.269.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2361
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.269.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.269.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:50:23 2024]
+Finished job 2361.
+81 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:50:23 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.922.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.922.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2894
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.922.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.922.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:50:34 2024]
+Finished job 2894.
+82 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:50:34 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.912.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.912.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2954
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.912.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.912.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Sun Jan 21 23:50:44 2024]
+Finished job 2954.
+83 of 1007 steps (8%) done
+Select jobs to execute...
+
+[Sun Jan 21 23:50:44 2024]
+rule endCutSparta_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutShuffleSpartaDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutSpartaStartTimeDone.txt, /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMaskSpartaDone.txt, /home/ec2-user/meyersData/shuffleDirSparta_1/anno.mir.tas.335.shuffled.fa_clean_revcomp.fa_clean_revcomp.fa
+    output: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.335.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    jobid: 2888
+    reason: Missing output files: /home/ec2-user/meyersData/transcript_bedgraph_capmasked_sparta1/anno.mir.tas.335.shuffled.fa_clean_revcomp.fa_clean_revcomp.pred.sites.bed
+    wildcards: miRShuffled=anno.mir.tas.335.shuffled.fa_clean_revcomp.fa_clean_revcomp
+    threads: 2
+    resources: tmpdir=/tmp
+

@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+endCutStep2_sh        1
+total                 2
+
+Select jobs to execute...
+
+[Tue Jan 23 05:38:00 2024]
+rule endCutStep2_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2SpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    jobid: 1
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Tue Jan 23 05:53:14 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Tue Jan 23 05:53:14 2024]
+localrule all:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    jobid: 0
+    reason: Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    resources: tmpdir=/tmp
+
+[Tue Jan 23 05:53:14 2024]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2024-01-23T053756.958002.snakemake.log

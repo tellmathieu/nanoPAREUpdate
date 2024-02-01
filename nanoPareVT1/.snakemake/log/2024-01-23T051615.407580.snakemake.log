@@ -1,0 +1,40 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+all                   1
+endCutStep2_sh        1
+total                 2
+
+Select jobs to execute...
+
+[Tue Jan 23 05:16:19 2024]
+rule endCutStep2_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2SpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    jobid: 1
+    reason: Missing output files: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Tue Jan 23 05:18:27 2024]
+Error in rule endCutStep2_sh:
+    jobid: 1
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep1WIN2SpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+    shell:
+        
+		st=`date +%s`
+		bash runEndCutStep2Bash.sh /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/scripts/EndCut_step2.v03.git.R /home/ec2-user/meyersData/reference_sparta1.table /home/ec2-user/meyersData transcript_bedgraph_capmasked_sparta1 transcript.capmasked 1000 /home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources
+		et=`date +%s`
+		rt=$((et-st))
+		echo "//////////ENDCUT_STEP2_DONE ($rt s)" >> /home/ec2-user/meyersData/runtimesparta_1.log
+		echo DONE > /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endCutStep2SpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2024-01-23T051615.407580.snakemake.log
