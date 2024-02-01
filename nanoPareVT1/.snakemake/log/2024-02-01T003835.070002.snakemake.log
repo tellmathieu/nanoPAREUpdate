@@ -1,0 +1,64 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+all              1
+endMap_sh        1
+setup_sh         1
+total            3
+
+Select jobs to execute...
+
+[Thu Feb  1 00:47:13 2024]
+rule setup_sh:
+    input: /home/ec2-user/meyersData/FASTQsparta2
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    jobid: 2
+    reason: Updated input files: /home/ec2-user/meyersData/FASTQsparta2
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Thu Feb  1 00:47:17 2024]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Thu Feb  1 00:47:17 2024]
+rule endMap_sh:
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    jobid: 1
+    reason: Input files updated by another job: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    threads: 2
+    resources: tmpdir=/tmp
+
+[Thu Feb  1 00:47:17 2024]
+Error in rule endMap_sh:
+    jobid: 1
+    input: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/setupSpartaDone.txt
+    output: /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+    shell:
+        
+			echo 2
+			st=`date +%s`
+			total_lines=$(cat /home/ec2-user/meyersData/reference_sparta1.table | wc -l)
+			echo $total_lines
+			#line=1
+			#while [ $line -le $total_lines ]
+			#do 
+			#	bash /home/ec2-user/nanoPAREUpdate/nanoPARE/endMap.sh -L $line -R /home/ec2-user/meyersData/reference_sparta1.table -G /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta -A /home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff --ram 1 --cpus 2 --icomp 0
+			#	let line++
+			done
+			et=`date +%s`
+			rt=$((et-st))
+			echo "//////////ENDMAP_DONE ($rt s)" >> /home/ec2-user/meyersData/runtimesparta_2.log
+			echo DONE > /home/ec2-user/nanoPAREUpdate/nanoPareVT1/endMapSpartaDone.txt
+		
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-01T003835.070002.snakemake.log

@@ -1,0 +1,3 @@
+TypeError in file /home/ec2-user/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta2.smk, line 8:
+'module' object is not callable
+  File "/home/ec2-user/nanoPAREUpdate/nanoPareVT1/snakeSetup2EndCutUpdate_sparta2.smk", line 8, in <module>
