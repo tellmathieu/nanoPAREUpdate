@@ -2,8 +2,8 @@
 	"Title" : "nanoPARE Pipeline Adapted with sPARTA v2",
 	"Description" : "Adapted version of nanoPARE Pipeline with sPARTA to make it quicker",
 
-	"fastaRef" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/genome.fasta",
-	"annotation" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/resources/annotation.gff",
+	"fastaRef" : "/home/tmathieu/nanoPAREUpdate-SPARTA-SMK/nanoPARE/resources/genome.fasta",
+	"annotation" : "/home/tmathieu/nanoPAREUpdate-SPARTA-SMK/nanoPARE/resources/annotation.gff",
 
 	"AnnoTypeComment" : "Type of the Annotation File above, either GFF or GTF",
 		"annotationType" : "GFF",
@@ -11,18 +11,18 @@
 	"genomeFeatureComment" : "0 for genic regions, or 1 for intergenic regions",
 		"genomeFeature" : "0",
 
-	"refTable" : "/home/ec2-user/meyersData/reference_sparta1.table",
+	"refTable" : "/home/tmathieu/SPARTA-DATA/reference.table",
 		"seq_run_SE_or_PE" : "SE",
 		"adapter_seq" : "nextera",
-	"fastqDir" : "/home/ec2-user/meyersData/FASTQsparta2",
-	"runtime_log" : "/home/ec2-user/meyersData/runtimesparta_2.log",
+	"fastqDir" : "/home/tmathieu/SPARTA-DATA/FASTQ",
+	"runtime_log" : "/home/tmathieu/SPARTA-DATA/runtime.log",
 	
 
-	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked_sparta2",
+	"transcript_bedgraph_capmaskedDir" : "transcript_bedgraph_capmasked",
 	"suff" : "transcript.capmasked",
 	
 
-	"sRna" : "/home/ec2-user/nanoPAREUpdate/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
+	"sRna" : "/home/tmathieu/nanoPAREUpdate-SPARTA-SMK/nanoPARE/EndCut.pipeline/resources/sRNAs/anno.mir.tas.fa",
 	"numShuffledSets" : "1000",
 
 	"threads" : "16",
@@ -50,7 +50,7 @@
 		"nucleotideWIN1" : "20",
 		"nucleotideWIN2" : "50",
 
-	"programDir" : "/home/ec2-user/nanoPAREUpdate",
+	"programDir" : "/home/tmathieu/nanoPAREUpdate-SPARTA-SMK",
 
 		"Appended folders program" : "To programDir",
 
@@ -77,9 +77,9 @@
 				"createRefTable" : "python/createRefTable.py",
 
 
-	"dataDir" : "/home/ec2-user/meyersData",
+	"dataDir" : "/home/tmathieu/SPARTA-DATA",
 
 		"Appended folders program" : "To dataDir",
-			"shuffleDir" : "shuffleDirSparta_2",
+			"shuffleDir" : "shuffleDir",
 			"sPARTADir" : "sPARTA"
 }
